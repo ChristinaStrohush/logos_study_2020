@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-21-control</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+
+<body>
+    <div class="mainTools">
+        <div class="mainMenu container-fluid d-flex justify-content-center align-items-center">
+            <form name="htmlForm">
+                <div class="btn-group-toggle m-1" data-toggle="buttons">
+                    <label class="btn btn-light btn-sm disabled" id="htmlLab" name="options">
+                        <input type="checkbox" name="htmlInp" id="htmlInp" disabled>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            preserveAspectRatio="xMidYMid" width="17" height="16" viewBox="0 0 640 512">
+                            <path fill="currentColor"
+                                d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z">
+                            </path>
+                        </svg>
+                    </label>
+                </div>
+            </form>
+            <form name="fontForm" id="fontForm">
+                <div class="btn-group btn-group-toggle m-1" data-toggle="buttons">
+                    <label class="btn btn-light btn-sm" id="bold" name="options">
+                        <input type="checkbox" name="bold" id="bold" value="bold">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            preserveAspectRatio="xMidYMid" width="17" height="16" viewBox="0 0 384 512">
+                            <path fill="currentColor"
+                                d="M333.49 238a122 122 0 0 0 27-65.21C367.87 96.49 308 32 233.42 32H34a16 16 0 0 0-16 16v48a16 16 0 0 0 16 16h31.87v288H34a16 16 0 0 0-16 16v48a16 16 0 0 0 16 16h209.32c70.8 0 134.14-51.75 141-122.4 4.74-48.45-16.39-92.06-50.83-119.6zM145.66 112h87.76a48 48 0 0 1 0 96h-87.76zm87.76 288h-87.76V288h87.76a56 56 0 0 1 0 112z">
+                            </path>
+                        </svg>
+                    </label>
+                    <label class="btn btn-light btn-sm" id="italic" name="options">
+                        <input type="checkbox" name="italic" id="italic" value="italic">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            preserveAspectRatio="xMidYMid" width="17" height="16" viewBox="0 0 320 512">
+                            <path fill="currentColor"
+                                d="M320 48v32a16 16 0 0 1-16 16h-62.76l-80 320H208a16 16 0 0 1 16 16v32a16 16 0 0 1-16 16H16a16 16 0 0 1-16-16v-32a16 16 0 0 1 16-16h62.76l80-320H112a16 16 0 0 1-16-16V48a16 16 0 0 1 16-16h192a16 16 0 0 1 16 16z">
+                            </path>
+                        </svg>
+                    </label>
+                    <label class="btn btn-light btn-sm" id="underline" name="options">
+                        <input type="checkbox" name="underline" id="underline" value="underline">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            preserveAspectRatio="xMidYMid" width="17" height="16" viewBox="0 0 448 512">
+                            <path fill="currentColor"
+                                d="M32 64h32v160c0 88.22 71.78 160 160 160s160-71.78 160-160V64h32a16 16 0 0 0 16-16V16a16 16 0 0 0-16-16H272a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h32v160a80 80 0 0 1-160 0V64h32a16 16 0 0 0 16-16V16a16 16 0 0 0-16-16H32a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16zm400 384H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z">
+                            </path>
+                        </svg>
+                    </label>
+                    <label class="btn btn-light btn-sm" id="line-through" name="options">
+                        <input type="checkbox" name="through" id="line-through" value="line-through">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            preserveAspectRatio="xMidYMid" width="17" height="16" viewBox="0 0 512 512">
+                            <path fill="currentColor"
+                                d="M496 224H293.9l-87.17-26.83A43.55 43.55 0 0 1 219.55 112h66.79A49.89 49.89 0 0 1 331 139.58a16 16 0 0 0 21.46 7.15l42.94-21.47a16 16 0 0 0 7.16-21.46l-.53-1A128 128 0 0 0 287.51 32h-68a123.68 123.68 0 0 0-123 135.64c2 20.89 10.1 39.83 21.78 56.36H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h480a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm-180.24 96A43 43 0 0 1 336 356.45 43.59 43.59 0 0 1 292.45 400h-66.79A49.89 49.89 0 0 1 181 372.42a16 16 0 0 0-21.46-7.15l-42.94 21.47a16 16 0 0 0-7.16 21.46l.53 1A128 128 0 0 0 224.49 480h68a123.68 123.68 0 0 0 123-135.64 114.25 114.25 0 0 0-5.34-24.36z">
+                            </path>
+                        </svg>
+                    </label>
+                </div>
+            </form>
+            <form name="alingForm" id="alingForm">
+                <div class="btn-group btn-group-toggle m-1" data-toggle="buttons">
+                    <label class="btn btn-light btn-sm" id="left" name="options">
+                        <input type="radio" name="alingStyle" id="left" value="left">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            preserveAspectRatio="xMidYMid" width="17" height="16" viewBox="0 0 448 512">
+                            <path fill="currentColor"
+                                d="M12.83 352h262.34A12.82 12.82 0 0 0 288 339.17v-38.34A12.82 12.82 0 0 0 275.17 288H12.83A12.82 12.82 0 0 0 0 300.83v38.34A12.82 12.82 0 0 0 12.83 352zm0-256h262.34A12.82 12.82 0 0 0 288 83.17V44.83A12.82 12.82 0 0 0 275.17 32H12.83A12.82 12.82 0 0 0 0 44.83v38.34A12.82 12.82 0 0 0 12.83 96zM432 160H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0 256H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z">
+                            </path>
+                        </svg>
+                    </label>
+                    <label class="btn btn-light btn-sm" id="center" name="options">
+                        <input type="radio" name="alingStyle" id="center" value="center">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            preserveAspectRatio="xMidYMid" width="17" height="16" viewBox="0 0 448 512">
+                            <path fill="currentColor"
+                                d="M432 160H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0 256H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zM108.1 96h231.81A12.09 12.09 0 0 0 352 83.9V44.09A12.09 12.09 0 0 0 339.91 32H108.1A12.09 12.09 0 0 0 96 44.09V83.9A12.1 12.1 0 0 0 108.1 96zm231.81 256A12.09 12.09 0 0 0 352 339.9v-39.81A12.09 12.09 0 0 0 339.91 288H108.1A12.09 12.09 0 0 0 96 300.09v39.81a12.1 12.1 0 0 0 12.1 12.1z">
+                            </path>
+                        </svg>
+                    </label>
+                    <label class="btn btn-light btn-sm" id="right" name="options">
+                        <input type="radio" name="alingStyle" id="right" value="right">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            preserveAspectRatio="xMidYMid" width="17" height="16" viewBox="0 0 448 512">
+                            <path fill="currentColor"
+                                d="M16 224h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16zm416 192H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm3.17-384H172.83A12.82 12.82 0 0 0 160 44.83v38.34A12.82 12.82 0 0 0 172.83 96h262.34A12.82 12.82 0 0 0 448 83.17V44.83A12.82 12.82 0 0 0 435.17 32zm0 256H172.83A12.82 12.82 0 0 0 160 300.83v38.34A12.82 12.82 0 0 0 172.83 352h262.34A12.82 12.82 0 0 0 448 339.17v-38.34A12.82 12.82 0 0 0 435.17 288z">
+                            </path>
+                        </svg>
+                    </label>
+                </div>
+            </form>
+            <form name="styleForm" id="styleForm">
+                <div id="withDrop" class="btn-group btn-group-toggle m-1">
+                    <div class="dropdown">
+                        <a class="btn btn-light btn-sm dropdown-toggle" href="#" role="button" id="dropFontFamily"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <svg id="font" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                preserveAspectRatio="xMidYMid" width="17" height="16" viewBox="0 0 448 512">
+                                <path fill="currentColor"
+                                    d="M432 416h-23.41L277.88 53.69A32 32 0 0 0 247.58 32h-47.16a32 32 0 0 0-30.3 21.69L39.41 416H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h128a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16h-19.58l23.3-64h152.56l23.3 64H304a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h128a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zM176.85 272L224 142.51 271.15 272z">
+                                </path>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu" id="fontFamily" aria-labelledby="dropFontFamily">
+                            <a class="dropdown-item" href="#" style="font-family: Arial;">Arial</a>
+                            <a class="dropdown-item" href="#" style="font-family: Georgia;">Georgia</a>
+                            <a class="dropdown-item" href="#" style="font-family: Impact;">Impact</a>
+                            <a class="dropdown-item" href="#" style="font-family: Tahoma;">Tahoma</a>
+                            <a class="dropdown-item" href="#" style="font-family: Times New Roman;">Times New Roman</a>
+                            <a class="dropdown-item" href="#" style="font-family: Verdana;">Verdana</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a class="btn btn-light btn-sm dropdown-toggle" href="#" role="button" id="dropSize"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <svg id="text-height" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="17"
+                                height="16" viewBox="0 0 576 512">
+                                <path fill="currentColor"
+                                    d="M304 32H16A16 16 0 0 0 0 48v96a16 16 0 0 0 16 16h32a16 16 0 0 0 16-16v-32h56v304H80a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h160a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16h-40V112h56v32a16 16 0 0 0 16 16h32a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zm256 336h-48V144h48c14.31 0 21.33-17.31 11.31-27.31l-80-80a16 16 0 0 0-22.62 0l-80 80C379.36 126 384.36 144 400 144h48v224h-48c-14.31 0-21.32 17.31-11.31 27.31l80 80a16 16 0 0 0 22.62 0l80-80C580.64 386 575.64 368 560 368z">
+                                </path>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu" id="fontSize" aria-labelledby="dropSize">
+                            <a class="dropdown-item" href="#" style="font-size: 12px;">12px</a>
+                            <a class="dropdown-item" href="#" style="font-size: 14px;">14px</a>
+                            <a class="dropdown-item" href="#" style="font-size: 16px;">16px</a>
+                            <a class="dropdown-item" href="#" style="font-size: 18px;">18px</a>
+                            <a class="dropdown-item" href="#" style="font-size: 20px;">20px</a>
+                            <a class="dropdown-item" href="#" style="font-size: 22px;">22px</a>
+                            <a class="dropdown-item" href="#" style="font-size: 25px;">25px</a>
+                            <a class="dropdown-item" href="#" style="font-size: 30px;">30px</a>
+                        </div>
+                    </div>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-light btn-sm" id="textColor" name="options">
+                            <input type="radio" name="colorStyle" id="textColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                preserveAspectRatio="xMidYMid" width="17" height="16" viewBox="0 0 512 512">
+                                <path fill="currentColor"
+                                    d="M204.3 5C104.9 24.4 24.8 104.3 5.2 203.4c-37 187 131.7 326.4 258.8 306.7 41.2-6.4 61.4-54.6 42.5-91.7-23.1-45.4 9.9-98.4 60.9-98.4h79.7c35.8 0 64.8-29.6 64.9-65.3C511.5 97.1 368.1-26.9 204.3 5zM96 320c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm32-128c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128-64c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128 64c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z">
+                                </path>
+                            </svg>
+                        </label>
+                        <label class="btn btn-light btn-sm" id="back" name="options">
+                            <input type="radio" name="colorStyle" id="back">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                preserveAspectRatio="xMidYMid" width="17" height="16" viewBox="0 0 512 512">
+                                <path fill="currentColor"
+                                    d="M464 448H48c-26.51 0-48-21.49-48-48V112c0-26.51 21.49-48 48-48h416c26.51 0 48 21.49 48 48v288c0 26.51-21.49 48-48 48zM112 120c-30.928 0-56 25.072-56 56s25.072 56 56 56 56-25.072 56-56-25.072-56-56-56zM64 384h384V272l-87.515-87.515c-4.686-4.686-12.284-4.686-16.971 0L208 320l-55.515-55.515c-4.686-4.686-12.284-4.686-16.971 0L64 336v48z">
+                                </path>
+                            </svg>
+                        </label>
+                    </div>
+                </div>
+            </form>
+            <form name="login">
+                <div class="btn-group-toggle m-1" data-toggle="buttons">
+                    <label class="btn btn-light btn-sm" id="lock" name="options">
+                        <input type="checkbox" name="" id="lock">
+                        <svg id="lockSvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            preserveAspectRatio="xMidYMid" width="17" height="16" viewBox="0 0 448 512">
+                            <path fill="currentColor"
+                                d="M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zm-104 0H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z">
+                            </path>
+                        </svg>
+                        <svg id="unlockSvg" style="display: none;" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="17"
+                            height="16" viewBox="0 0 448 512">
+                            <path fill="currentColor"
+                                d="M400 256H152V152.9c0-39.6 31.7-72.5 71.3-72.9 40-.4 72.7 32.1 72.7 72v16c0 13.3 10.7 24 24 24h32c13.3 0 24-10.7 24-24v-16C376 68 307.5-.3 223.5 0 139.5.3 72 69.5 72 153.5V256H48c-26.5 0-48 21.5-48 48v160c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z">
+                            </path>
+                        </svg>
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="editTools" style="display: none;">
+        <div class="editMenu container-fluid d-flex justify-content-center align-items-center">
+            <form name="editForm" id="editForm">
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-light btn-sm" id="save" name="options">
+                        <input type="radio" name="edInp" id="save">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            preserveAspectRatio="xMidYMid" width="17" height="16" viewBox="0 0 448 512">
+                            <path fill="currentColor"
+                                d="M433.941 129.941l-83.882-83.882A48 48 0 0 0 316.118 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V163.882a48 48 0 0 0-14.059-33.941zM224 416c-35.346 0-64-28.654-64-64 0-35.346 28.654-64 64-64s64 28.654 64 64c0 35.346-28.654 64-64 64zm96-304.52V212c0 6.627-5.373 12-12 12H76c-6.627 0-12-5.373-12-12V108c0-6.627 5.373-12 12-12h228.52c3.183 0 6.235 1.264 8.485 3.515l3.48 3.48A11.996 11.996 0 0 1 320 111.48z">
+                            </path>
+                        </svg>
+                    </label>
+                    <label class="btn btn-light btn-sm" id="table" name="options">
+                        <input type="radio" name="edInp" id="table">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            preserveAspectRatio="xMidYMid" width="17" height="16" viewBox="0 0 512 512">
+                            <path fill="currentColor"
+                                d="M464 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zM224 416H64v-96h160v96zm0-160H64v-96h160v96zm224 160H288v-96h160v96zm0-160H288v-96h160v96z">
+                            </path>
+                        </svg>
+                    </label>
+                    <label class="btn btn-light btn-sm" id="olList" name="options">
+                        <input type="radio" name="edInp" id="olList">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            preserveAspectRatio="xMidYMid" width="17" height="16" viewBox="0 0 512 512">
+                            <path fill="currentColor"
+                                d="M61.77 401l17.5-20.15a19.92 19.92 0 0 0 5.07-14.19v-3.31C84.34 356 80.5 352 73 352H16a8 8 0 0 0-8 8v16a8 8 0 0 0 8 8h22.83a157.41 157.41 0 0 0-11 12.31l-5.61 7c-4 5.07-5.25 10.13-2.8 14.88l1.05 1.93c3 5.76 6.29 7.88 12.25 7.88h4.73c10.33 0 15.94 2.44 15.94 9.09 0 4.72-4.2 8.22-14.36 8.22a41.54 41.54 0 0 1-15.47-3.12c-6.49-3.88-11.74-3.5-15.6 3.12l-5.59 9.31c-3.72 6.13-3.19 11.72 2.63 15.94 7.71 4.69 20.38 9.44 37 9.44 34.16 0 48.5-22.75 48.5-44.12-.03-14.38-9.12-29.76-28.73-34.88zM496 224H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-160H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 320H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zM16 160h64a8 8 0 0 0 8-8v-16a8 8 0 0 0-8-8H64V40a8 8 0 0 0-8-8H32a8 8 0 0 0-7.14 4.42l-8 16A8 8 0 0 0 24 64h8v64H16a8 8 0 0 0-8 8v16a8 8 0 0 0 8 8zm-3.91 160H80a8 8 0 0 0 8-8v-16a8 8 0 0 0-8-8H41.32c3.29-10.29 48.34-18.68 48.34-56.44 0-29.06-25-39.56-44.47-39.56-21.36 0-33.8 10-40.46 18.75-4.37 5.59-3 10.84 2.8 15.37l8.58 6.88c5.61 4.56 11 2.47 16.12-2.44a13.44 13.44 0 0 1 9.46-3.84c3.33 0 9.28 1.56 9.28 8.75C51 248.19 0 257.31 0 304.59v4C0 316 5.08 320 12.09 320z">
+                            </path>
+                        </svg>
+                    </label>
+                    <label class="btn btn-light btn-sm" id="ulList" name="options">
+                        <input type="radio" name="edInp" id="ulList">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            preserveAspectRatio="xMidYMid" width="17" height="16" viewBox="0 0 512 512">
+                            <path fill="currentColor"
+                                d="M48 48a48 48 0 1 0 48 48 48 48 0 0 0-48-48zm0 160a48 48 0 1 0 48 48 48 48 0 0 0-48-48zm0 160a48 48 0 1 0 48 48 48 48 0 0 0-48-48zm448 16H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 160H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z">
+                            </path>
+                        </svg>
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+    <main>
+        <div class="container lorem">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    </main>
+
+    <div class="colorPanel m-auto">
+        <div class="modal-header d-flex flex-column justify-content-between" style="border: none;">
+            <div class="container d-flex justify-content-between align-items-center">
+                <h5 class="modal-title m-0">Choose text color</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+        <div class="colorBox">
+            <div class="colorText"></div>
+            <div class="colorText"></div>
+            <div class="colorText"></div>
+            <div class="colorText"></div>
+            <div class="colorText"></div>
+            <div class="colorText"></div>
+            <div class="colorText"></div>
+            <div class="colorText"></div>
+            <div class="colorText"></div>
+            <div class="colorText"></div>
+            <div class="colorText"></div>
+            <div class="colorText"></div>
+            <div class="colorText"></div>
+            <div class="colorText"></div>
+            <div class="colorText"></div>
+            <div class="colorText"></div>
+            <div class="colorText"></div>
+            <div class="colorText"></div>
+            <div class="colorText"></div>
+            <div class="colorText"></div>
+            <div class="colorText"></div>
+        </div>
+        <div class="navBar" style="display: none;">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                        aria-controls="home" aria-selected="true">Colors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                        aria-controls="profile" aria-selected="false">Images</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                        aria-controls="contact" aria-selected="false">Files</a>
+                </li>
+            </ul>
+        </div>
+        <div class="colorBlock fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+        </div>
+        <div style="display: none;" class="imageBlock fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="img"></div>
+            <div class="img"></div>
+            <div class="img"></div>
+            <div class="img"></div>
+            <div class="img"></div>
+            <div class="img"></div>
+            <div class="img"></div>
+            <div class="img"></div>
+            <div class="img"></div>
+        </div>
+        <div style="display: none;" class="fileBlock fade p-3" id="contact" role="tabpanel"
+            aria-labelledby="contact-tab">
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="customFile">
+                <label class="custom-file-label" for="customFile">Choose file</label>
+            </div>
+        </div>
+    </div>
+    <div class="sign">
+        <div class="signIn m-auto p-2" style="display: none;">
+            <div class="modal-header d-flex justify-content-center align-items-center">
+                <h5 class="modal-title">Sing In</h5>
+            </div>
+            <div class="modal-body">
+                <form id="singInForm">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="login" placeholder="Login here...">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="password" placeholder="Password here...">
+                    </div>
+                    <button type="button" id="signInButton" class="btn btn-secondary btn-block">Sign Int</button>
+                </form>
+            </div>
+        </div>
+        <div class="signOut" style="display: none;">
+            <div class="signOutBox d-flex justify-content-around align-items-center">
+                <button type="button" id="cancel" class="btn btn-dark">Cancel</button>
+                <button type="button" id="singOut" class="btn btn-danger">Sign Out</button>
+            </div>
+        </div>
+    </div>
+    <div class="tabBox m-auto p-2" style="display: none;">
+        <div class="modal-header">
+            <h5 class="modal-title">Create table</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+
+        </div>
+        <form id="tableForm">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="countTr">Count TR</label>
+                    <input type="number" class="form-control form-control-sm" id="countTr" placeholder="Type here...">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="countTd">Count TD</label>
+                    <input type="number" class="form-control form-control-sm" id="countTd" placeholder="Type here...">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="widthTd">Width of TD</label>
+                    <input type="number" class="form-control form-control-sm" id="widthTd" placeholder="Type here...">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="heightTd">Height of TD</label>
+                    <input type="number" class="form-control form-control-sm" id="heightTd" placeholder="Type here...">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="widthBorder">Width of border</label>
+                    <input type="number" class="form-control form-control-sm" id="widthBorder"
+                        placeholder="Type here...">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="styleBorder">Style of border</label>
+                    <select id="styleBorder" class="form-control form-control-sm">
+                        <option selected disabled>choose style...</option>
+                        <option>dotted</option>
+                        <option>dashed</option>
+                        <option>solid</option>
+                        <option>double</option>
+                        <option>groove</option>
+                        <option>ridge</option>
+                        <option>inset</option>
+                        <option>outset</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="colorBorder">Color of border</label>
+                    <select id="colorBorder" class="form-control form-control-sm">
+                        <option selected disabled>choose color...</option>
+                        <option>black</option>
+                        <option>red</option>
+                        <option>green</option>
+                        <option>blue</option>
+                        <option>yellow</option>
+                        <option>white</option>
+                        <option>gray</option>
+                        <option>pink</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <button type="button" id="resetTab" class="btn btn-danger btn-block btn-sm"
+                        data-dismiss="modal">Reset</button>
+                </div>
+                <div class="form-group col-md-6">
+                    <button type="button" id="createTab" class="btn btn-success btn-block btn-sm">Create table</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <div class="olBox m-auto p-2" style="display: none;">
+        <div class="modal-header">
+            <h5 class="modal-title">Create Ol</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+
+        </div>
+        <form id="olForm">
+            <div class="form-group">
+                <label for="countLiOl">Count li item</label>
+                <input type="number" class="form-control form-control-sm" id="countLiOl" placeholder="Type here...">
+            </div>
+            <div class="form-group">
+                <label for="markLiOl">Type mark of list</label>
+                <select id="markLiOl" class="form-control form-control-sm">
+                    <option selected disabled>choose Ol type mark...</option>
+                    <option value="decimal">1</option>
+                    <option value="upper-roman">I</option>
+                    <option value="lower-roman">i</option>
+                    <option value="upper-alpha">A</option>
+                    <option value="lower-alpha">a</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <button type="button" id="resetOl" class="btn btn-danger btn-block btn-sm"
+                        data-dismiss="modal">Reset</button>
+                </div>
+                <div class="form-group col-md-6">
+                    <button type="button" id="createOl" class="btn btn-success btn-block btn-sm">Create list</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="ulBox m-auto p-2" style="display: none;">
+        <div class="modal-header">
+            <h5 class="modal-title">Create Ul</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+
+        </div>
+        <form id="ulForm">
+            <div class="form-group">
+                <label for="countLiUl">Count li item</label>
+                <input type="number" class="form-control form-control-sm" id="countLiUl" placeholder="Type here...">
+            </div>
+            <div class="form-group">
+                <label for="markLiUl">Type mark of list</label>
+                <select id="markLiUl" class="form-control form-control-sm">
+                    <option selected disabled>choose Ul type mark...</option>
+                    <option value="circle">circle</option>
+                    <option value="disc">disc</option>
+                    <option value="square">square</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <button type="button" id="resetUl" class="btn btn-danger btn-block btn-sm"
+                        data-dismiss="modal">Reset</button>
+                </div>
+                <div class="form-group col-md-6">
+                    <button type="button" id="createUl" class="btn btn-success btn-block btn-sm">Create list</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <form>
+        <div class="form-group editCode" style="display: none;">
+            <textarea class="form-control" id="editCodeBlock"></textarea>
+        </div>
+    </form>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

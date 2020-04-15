@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: tomato;
+}
+
+.circle01{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 7px solid white;
+    border-top: 7px solid transparent;
+    border-right: 7px solid transparent;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    z-index: 1;
+}
+.circle02{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 7px solid white;
+    border-top: 7px solid transparent;
+    border-left: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-right: 7px solid transparent;
+    transform: rotate(225deg);
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    z-index: 3;
+}
+
+.block{
+    width: 152px;
+    height: 301px;
+    background-color: tomato;
+    position: absolute;
+    top: 199px;
+    left: 199px;
+    z-index: 2;
+}
+
+.text{
+    color: white;
+    font-size: 40px;
+    font-weight: 800;
+    position: absolute;
+    top: 326px;
+    left: 310px;
+    z-index: 4;
+}
