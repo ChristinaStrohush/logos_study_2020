@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+input{
+    cursor: pointer;
+}
+
+.block{
+    width: 70vw;
+    height: 260px;
+    background-color: rgb(230, 230, 230);
+    border: 1px solid rgb(218, 218, 218);
+    border-radius: 5px;
+    margin: 10px auto;
+}
+
+.lorem{
+    height: 100%;
+    padding: 25px;
+    line-height: 1;
+    font-size: 16px;
+}
+
+.mainButton{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.style{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edit{
+    height: 100%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.styleForms{
+    height: 100%;
+    width: 60%;
+    padding: 25px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.styleForms p{
+    margin: 0;
+    font-weight: 700;
+}
+
+.styleBox,
+.styleBox02{
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.boxSmall{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.boxSmall:nth-of-type(1){
+    background-color: #005f3a;
+    color: #005f3a;
+}
+
+.boxSmall:nth-of-type(2){
+    background-color: #779d89;
+    color: #779d89;
+}
+
+.boxSmall:nth-of-type(3){
+    background-color: #c7f0ee;
+    color: #c7f0ee;
+}
+.boxSmall:nth-of-type(4){
+    background-color: #ffb300;
+    color: #ffb300;
+}
+
+.boxSmall:nth-of-type(5){
+    background-color: #ffde52;
+    color: #ffde52;
+}
+
+.boxSmall:nth-of-type(6){
+    background-color: #fedda1;
+    color: #fedda1;
+}
+.boxSmall:nth-of-type(7){
+    background-color: #ff0659;
+    color: #ff0659;
+}
+
+.boxSmall:nth-of-type(8){
+    background-color: #ff6aa1;
+    color: #ff6aa1;
+}
+
+.boxSmall:nth-of-type(9){
+    background-color: #ffbbef;
+    color: #ffbbef;
+}
+
+.hide{
+    display: none;
+}
+
+.loremEdit{
+    width: 100%;
+    height: 120px;
+    color: #555;
+    font-size: 12px;
+}
+
+.elements{
+    padding: 25px;
+}
+
+.table,
+.list{
+    height: 100%;
+    padding: 25px 0 0;
+}

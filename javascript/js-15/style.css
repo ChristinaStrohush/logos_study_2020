@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box{
+    width: 810px;
+    height: 400px;
+    margin: 20px auto; 
+    display: flex;
+    justify-content: space-between;
+}
+
+.block{
+    width: 80%;
+    padding: 0 20px;
+}
+
+.part{
+    width: 400px;
+    height: 100%;
+    color: white;
+    background-color: #333;
+}
+
+.tittle{
+    height: 50px;
+    margin: 0;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ckeckList{
+    background-color: yellowgreen;
+}
+
+.taskList{
+    background-color: tomato;
+}
+
+#add{
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+}
+
+#moveTask{
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+#textAdd{
+    margin: 0 0 15px;
+}
+
+#add input[type="text"]{
+    padding: 5px;
+}
+
+#add input[type="button"]{
+    padding: 5px 20px;
+    background-color: yellowgreen;
+    color: white;
+}
+
+.hide{
+    display: none;
+}

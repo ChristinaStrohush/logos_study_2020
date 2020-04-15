@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #333;
+    color: rgb(82, 215, 248);
+    font-family: 'Sirin Stencil', cursive;
+}
+hr{
+    border-color: rgb(82, 215, 248);
+}
+.block{
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.lgl{
+    font-size: 4em;
+}
+.lgm{
+    font-size: 3.5em;
+}
+.md{
+    font-size: 3em;
+}
+.sm{
+    font-size: 1.5em;
+}
+.insite{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.display{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.result{
+    width: 20%;
+    height: 65%;
+    border: 1px solid rgb(82, 215, 248);
+    border-radius: 5px;
+    overflow: auto;
+}
+input{
+    cursor: pointer;
+    padding: 5px;
+    color: rgb(82, 215, 248);
+    background-color: transparent;
+    border: 1px solid rgb(82, 215, 248);
+    border-radius: 5px;
+}

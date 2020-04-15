@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeObject 17 JS</title>
+    <link href="https://fonts.googleapis.com/css?family=Sirin+Stencil&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="time block">
+        <p class="sm hourNow"></p>
+        <p class="lgl timeNow"></p>
+    </div>
+    <hr><br><hr>
+    <div class="second block display">
+        <div class="secondMir insite">
+            <p class="md sek">00:00:00</p>
+            <form name="second">
+                <input type="button" value="start" name="start">
+                <input type="button" value="loop" name="loop">
+                <input type="button" value="stop" name="stop">
+                <input type="button" value="reset" name="reset">
+            </form>
+        </div>
+        <div class="result insite"></div>
+    </div>
+    <hr><br><hr>
+    <div class="timer block display">
+        <div class="check insite">
+            <p class="lgm countMinutes">25</p>
+            <p class="sm">minutes</p>
+            <form name="check">
+                <input type="button" value="+" name="plus">
+                <input type="button" value="-" name="minus">
+            </form>
+        </div>
+        <div class="timeout insite">
+            <p class="lgl timerStart">25:00</p>
+            <form name="timer">
+                <input type="button" value="start" name="start">
+                <input type="button" value="stop" name="stop">
+                <input type="button" value="reset" name="reset">
+            </form>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

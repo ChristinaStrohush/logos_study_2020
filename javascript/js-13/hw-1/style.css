@@ -1,0 +1,112 @@
+input{
+    cursor: pointer;
+}
+
+.box{
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.boxSmall{
+    width: 100px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.boxSmall:nth-of-type(1){
+    background-color: #005f3a;
+}
+
+.boxSmall:nth-of-type(2){
+    background-color: #779d89;
+}
+
+.boxSmall:nth-of-type(3){
+    background-color: #c7f0ee;
+}
+.boxSmall:nth-of-type(4){
+    background-color: #ffb300;
+}
+
+.boxSmall:nth-of-type(5){
+    background-color: #ffde52;
+}
+
+.boxSmall:nth-of-type(6){
+    background-color: #fedda1;
+}
+.boxSmall:nth-of-type(7){
+    background-color: #ff0659;
+}
+
+.boxSmall:nth-of-type(8){
+    background-color: #ff6aa1;
+}
+
+.boxSmall:nth-of-type(9){
+    background-color: #ffbbef;
+}
+
+.box02{
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box02Small{
+    width: 100px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.box02Small:nth-of-type(1){
+    background-image: url(https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+    background-size: cover;
+}
+
+.box02Small:nth-of-type(2){
+    background-image: url(https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&w=1000&q=80);
+    background-size: cover;
+}
+
+.box02Small:nth-of-type(3){
+    background-image: url(https://image.freepik.com/free-vector/abstract-blue-geometric-shapes-background_1035-17545.jpg);
+    background-size: cover;
+}
+.box02Small:nth-of-type(4){
+    background-image: url(https://cdn.pixabay.com/photo/2019/05/27/14/41/background-4232859_1280.png);
+    background-size: cover;
+}
+
+.box02Small:nth-of-type(5){
+    background-image: url(https://wallpaperaccess.com/full/187161.jpg);
+    background-size: cover;
+}
+
+.box02Small:nth-of-type(6){
+    background-image: url(https://img.freepik.com/free-photo/abstract-polygonal-space-low-poly-dark-background-3d-rendering_7247-223.jpg);
+    background-size: cover;
+}
+.box02Small:nth-of-type(7){
+    background-image: url(https://i.pinimg.com/originals/05/3d/0e/053d0e0e6a047192ab76c94f47355cdd.jpg);
+    background-size: cover;
+}
+
+.box02Small:nth-of-type(8){
+    background-image: url(https://image.freepik.com/free-vector/background-with-different-green-shapes_23-2148358648.jpg);
+    background-size: cover;
+}
+
+.box02Small:nth-of-type(9){
+    background-image: url(https://i.pinimg.com/originals/ba/32/e3/ba32e3025d97b4da3bc0a68474c43217.jpg);
+    background-size: cover;
+}

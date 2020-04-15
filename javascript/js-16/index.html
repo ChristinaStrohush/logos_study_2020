@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="lorem block">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="mainButton">
+        <form name="mainButton">
+            <input type="button" value="edit" name="edit" class="btn btn-warning button">
+            <input type="button" value="style" name="style" class="btn btn-info button">
+        </form>
+    </div>
+    <div class="styles block">
+        <div class="edit hide">
+            <form name="editClick">
+                <div class="form-group">
+                    <textarea name="loremEdit" class="loremEdit form-control" id="exampleFormControlTextarea1"
+                        rows="7"></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="col-auto">
+                        <input type="button" value="add" name="add" class="btn btn-danger mb-2">
+                    </div>
+                    <div class="col-auto">
+                        <input type="button" value="save" name="save" class="btn btn-success mb-2">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="style hide">
+            <div class="styleForms">
+                <p>Font Size:</p>
+                <form name="size">
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" name="fontS" id="12px" value="12px" class="custom-control-input">
+                        <label for="12px" class="custom-control-label">12px</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" name="fontS" id="14px" value="14px" class="custom-control-input">
+                        <label for="14px" class="custom-control-label">14px</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" name="fontS" id="16px" value="16px" class="custom-control-input" checked>
+                        <label for="16px" class="custom-control-label">16px</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" name="fontS" id="18px" value="18px" class="custom-control-input">
+                        <label for="18px" class="custom-control-label">18px</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" name="fontS" id="20px" value="20px" class="custom-control-input">
+                        <label for="20px" class="custom-control-label">20px</label>
+                    </div>
+                </form>
+                <p>Font Family:</p>
+                <form name="family">
+                    <div class="form-row align-items-center">
+                        <div class="col-auto my-1">
+                            <select name="fontFamily" id="fontFamily" class="custom-select custom-select-sm mr-sm-2">
+                                <option selected disabled>Choose option</option>
+                                <option value="cursive">cursive</option>
+                                <option value="fantasy">fantasy</option>
+                                <option value="monospace">monospace</option>
+                                <option value="sans-serif">sans-serif</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+                <p>Color:</p>
+                <form name="colors">
+                    <input type="button" name="color" value="Color of Text" class="btn btn-secondary">
+                    <input type="button" name="back" value="Background Color" class="btn btn-secondary">
+                </form>
+                <p>Style:</p>
+                <form name="weight">
+                    <div class="custom-control custom-checkbox custom-control-inline">
+                        <input type="checkbox" name="bold" id="bold" value="bold" class="custom-control-input">
+                        <label for="bold" class="custom-control-label">Bold text</label>
+                    </div>
+                    <div class="custom-control custom-checkbox custom-control-inline">
+                        <input type="checkbox" name="cursive" id="cursive" value="italic" class="custom-control-input">
+                        <label for="cursive" class="custom-control-label">Cursive text</label>
+                    </div>
+
+                </form>
+            </div>
+            <div class="styleBox hide">
+                <div class="boxSmall"></div>
+                <div class="boxSmall"></div>
+                <div class="boxSmall"></div>
+                <div class="boxSmall"></div>
+                <div class="boxSmall"></div>
+                <div class="boxSmall"></div>
+                <div class="boxSmall"></div>
+                <div class="boxSmall"></div>
+                <div class="boxSmall"></div>
+            </div>
+            <div class="styleBox02 hide">
+                <div class="boxSmall"></div>
+                <div class="boxSmall"></div>
+                <div class="boxSmall"></div>
+                <div class="boxSmall"></div>
+                <div class="boxSmall"></div>
+                <div class="boxSmall"></div>
+                <div class="boxSmall"></div>
+                <div class="boxSmall"></div>
+                <div class="boxSmall"></div>
+            </div>
+        </div>
+    </div>
+    <div class="elements block hide">
+        <h3>Choose what you want</h3>
+        <form name="elements">
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" name="element" id="table" class="custom-control-input">
+                <label for="table" class="custom-control-label">table</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" name="element" id="list" class="custom-control-input">
+                <label for="list" class="custom-control-label">list</label>
+            </div>
+        </form>
+        <div class="table hide">
+            <form name="table">
+                <div class="form-group row">
+                    <label for="tr" class="col-sm-2 col-form-label col-form-label-sm">Count TR:</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="tr" id="tr" placeholder="Count TR"
+                            class="form-control form-control-sm">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="td" class="col-sm-2 col-form-label col-form-label-sm">Count TD:</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="td" id="td" placeholder="Count TD"
+                            class="form-control form-control-sm">
+                    </div>
+                </div>
+                <p><b>Add style to your table</b></p>
+                <div class="form-group row">
+                    <label for="tdw" class="col-sm-2 col-form-label col-form-label-sm">Width of TD:</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="tdw" id="tdw" placeholder="Width of TD"
+                            class="form-control form-control-sm">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="tdh" class="col-sm-2 col-form-label col-form-label-sm">Height of TD:</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="tdh" id="tdh" placeholder="Height of TD"
+                            class="form-control form-control-sm">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="w" class="col-sm-2 col-form-label col-form-label-sm">Width of border:</label>
+                    <div class="col-auto">
+                        <input type="text" name="w" id="w" placeholder="Width of border"
+                            class="form-control form-control-sm">
+                    </div>
+                    <label for="type" class="col-form-label col-form-label-sm">Type of border:</label>
+                    <div class="col-auto">
+                        <select name="type" id="type" class="custom-select custom-select-sm mr-sm-2">
+                            <option value="solid">solid</option>
+                            <option value="dotted">dotted</option>
+                            <option value="outset">outset</option>
+                        </select>
+                    </div>
+                    <label for="clr" class="col-form-label col-form-label-sm">Color of border:</label>
+                    <div class="col-auto">
+                        <select name="clr" id="clr" class="custom-select custom-select-sm mr-sm-2">
+                            <option value="black">black</option>
+                            <option value="red">red</option>
+                            <option value="blue">blue</option>
+                            <option value="green">green</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <input type="button" name="button" value="Create table" class="btn btn-success">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="list hide">
+            <!-- <form name="liCount"> -->
+            <form name="liSit">
+                <div class="form-group row">
+                    <label for="count" class="col-sm-2 col-form-label col-form-label-sm">Count of Li:</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="count" id="count" placeholder="Count Li"
+                            class="form-control form-control-sm">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="type" class="col-sm-2 col-form-label col-form-label-sm">Type of marks:</label>
+                    <div class="col-sm-10">
+                        <select name="type" id="type" class="form-control form-control-sm">
+                            <option value="circle">circle</option>
+                            <option value="disc">disc</option>
+                            <option value="square">square</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <input type="button" name="button" value="Create list" class="btn btn-success">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

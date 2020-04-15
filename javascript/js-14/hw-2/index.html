@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.3/css/unicons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box">
+        <h3>Create your account</h3>
+        <form name="singup">
+                <label for="firstName">First Name</label>
+                <input type="text" name="firstName" placeholder="type here...">
+
+                <label for="secondName">Second Name</label>
+                <input type="text" name="secondName" placeholder="type here...">
+
+                <label for="email">Email address</label>
+                <input type="email" name="email" placeholder="enter email">   
+
+                <div class="radioButt">
+                    <input type="radio" name="sex" value="man" checked>man
+                    <input type="radio" name="sex" value="woman">woman
+                </div>
+                
+
+                <label for="position">Position</label>
+                <select name="position" placeholder="Choose...">
+                    <option value="Choose..." disabled selected>Choose...</option>
+                    <option value="Frontend">Frontend</option>
+                    <option value="Backend">Backend</option>
+                    <option value="QC/QA">QC/QA</option>
+                </select>
+                <div class="check">
+                    <input type="checkbox" name="agree">I agree all statements in Terms of service
+                </div>
+                <input name="button" type="button" value="Sing Up" disabled>
+        </form>
+    </div>
+    <div class="profile">
+        <div class="top"></div>
+        <div class="ava"></div>
+        <div class="date">
+            <p class="name"></p>
+            <p class="meil"></p>
+            <p class="position"></p>
+            <form name="singout">
+                <input type="button" value="Sing Out" name="button">
+            </form>
+        </div>
+        <div class="bottom">
+            <i class="uil uil-facebook-f"></i>
+            <i class="uil uil-github-alt"></i>
+            <i class="uil uil-linkedin-alt"></i>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

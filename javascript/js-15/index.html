@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Event window DZ 120320</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box">
+        <div class="part">
+            <p class="tittle ckeckList">Список завдань</p>
+            <form name="moveTask" id="moveTask">
+                <div class="block"><input type="checkbox"><span>HTML5</span></div>
+                <div class="block"><input type="checkbox"><span>CSS3</span></div>
+                <div class="block"><input type="checkbox"><span>SASS/SCSS</span></div>
+                <div class="block"><input type="checkbox"><span>Bootstrap</span></div>
+            </form>
+        </div>
+        <div class="part">
+            <p class="tittle taskList">Додати нове завдання</p>
+            <form name="add" id="add">
+                <input type="text" name="text" id="textAdd" name="text">
+                <input type="button" value="Додати" name="button">
+            </form>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

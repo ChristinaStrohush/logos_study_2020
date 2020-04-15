@@ -1,0 +1,50 @@
+.task0102{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.block{
+    width: 300px;
+    height: 300px;
+    margin: 10px auto;
+    background-color: purple;
+    border: 2px solid #000;
+}
+
+.colorBlock{
+    width: 300px;
+    height: 300px;
+    margin: 10px auto;
+    background-color: purple;
+    border: 7px inset gold;
+}
+
+.text{
+    color: black;
+    text-align: center;
+    font-size: 28px;
+    font-family: sans-serif;
+}
+
+.box{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.boxSmall{
+    width: 300px;
+    height: 300px;
+    border: 6px double #000;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+}
+
+li{
+    font-size: 24px;
+    font-weight: 800;
+    cursor: pointer;
+}

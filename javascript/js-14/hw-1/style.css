@@ -1,0 +1,27 @@
+.form{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+input{
+    height: 30px;
+    padding: 0 5px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.form input{
+    width: 32%;
+}
+
+.form [type='button']{
+    color: white;
+    background: green;
+    box-sizing: border-box;
+}
+
+.form2 input{
+    width: 100%;
+}
