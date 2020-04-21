@@ -1,0 +1,78 @@
+.footer{
+    &__lineZone{
+        border-color: $secondColor;
+    }
+    &__nav{
+        width: 80%;
+        margin: 20px auto;
+        display: flex;
+        justify-content: space-between;
+        @include _768{
+            width: 95%;
+        }
+        @include _500{
+            width: 70%;
+            flex-direction: column;
+        }
+        &__menu{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            @include _500{
+                flex-direction: column;
+                align-items: center;
+            }
+            &__logo{
+                @include logoDown;
+            }
+            &__company{
+                @include _500{
+                    width: 100%;
+                    text-align: center;
+                }
+                &__link{
+                    @include mainLinkFooter;
+                }
+                &__linksDown{
+                    padding: $paddingTotal;
+                    list-style: none;
+                    @include secondLinkFooter;
+                    &__about{
+                        padding: 5px;
+                    }
+                }
+            }
+            &__partners{
+                &__link{
+                    @include mainLinkFooter;
+                }
+            }
+        }
+        &__desing{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            @include _500{
+                width: 100%;
+                align-items: center;
+                padding: $paddingTotal;
+            }
+            &__text{
+                font-family: $mainFontFamily;
+                @include fontChange ($desingColor, 10px, 700);
+                text-transform: uppercase;
+                padding: $paddingTotal;
+            }
+            &__logo{
+                @include blockSize (120px, 25px);
+                background-image: url(../images/Bitmap.png);
+                background-position: right;
+                background-repeat: no-repeat;
+                @include _500{
+                    background-position: center;
+                }
+            }
+        }
+    }
+}

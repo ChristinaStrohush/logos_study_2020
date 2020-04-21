@@ -1,0 +1,20 @@
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin boxSize($wdth, $hght) {
+    width: $wdth;
+    height: $hght;
+}
+
+@mixin iconBoxSize {
+    width: 80px;
+    height: 100%;
+}
+
+@mixin discriptionBoxSize {
+    width: 250px;
+    height: 100%;
+}

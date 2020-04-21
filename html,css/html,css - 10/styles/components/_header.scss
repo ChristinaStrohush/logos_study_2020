@@ -1,0 +1,4 @@
+.header{
+    @include boxSize(100%, 20vh);
+    background-color: $headBgColor;
+}

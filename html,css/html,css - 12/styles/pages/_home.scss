@@ -1,0 +1,312 @@
+.main{
+    width: 80%;
+    margin: 20px auto;
+    @include _768{
+        width: 100%;
+    }
+    &__about{
+        &__tittle{
+            @include textMainTittle;
+        }
+        &__content{
+            @include blockSize (100%, 350px);
+            display: flex;
+            justify-content: space-between;
+            @include _500 {
+                height: 1000px;
+                flex-direction: column;
+            }
+            &__part01{
+                @include blockSize (calc(100% / 3.1), 100%);
+                background-image: url(../images/plan.jpg);
+                @include bgCoverCenter;
+                @include flexCenter;
+                @include _500{
+                    @include blockSize (100%, calc(100% / 3.1));
+                }
+                &__conteiner{
+                    @include conteinerAbout;
+                    &__button{
+                        @include buttonMain;
+                        @include fontChange($mainColor, 10px, 400);
+                        background-color: $secondColor;
+                        border-color: $secondColor;
+                        text-transform: uppercase;
+                        @include _500{
+                            width: 50%;
+                        }
+                    }
+                    &__tittle{
+                        font-family: $mainFontFamily;
+                        @include fontChange($mainColor, 24px, 700);
+                    }
+                    &__discription{
+                        font-family: $secondFontFamily;
+                        @include fontChange($thirthTittleColor, 14px, 300);
+                        padding: $paddingTotal;
+                    }
+                }
+            }
+            &__part02{
+                @include blockSize (calc(100% / 3.1), 100%);
+                background-image: url(../images/way.jpg);
+                @include bgCoverCenter;
+                @include flexCenter;
+                @include _500{
+                    @include blockSize (100%, calc(100% / 3.1));
+                }
+                &__conteiner{
+                    @include conteinerAbout;
+                    &__button{
+                        @include buttonMain;
+                        @include fontChange($mainColor, 10px, 400);
+                        background-color: $secondColor;
+                        border-color: $secondColor;
+                        text-transform: uppercase;
+                        @include _500{
+                            width: 50%;
+                        }
+                    }
+                    &__tittle{
+                        font-family: $mainFontFamily;
+                        @include fontChange($mainColor, 24px, 700);
+                    }
+                    &__discription{
+                        font-family: $secondFontFamily;
+                        @include fontChange($thirthTittleColor, 14px, 300);
+                        padding: $paddingTotal;
+                    }
+                }
+            }
+            &__part03{
+                @include blockSize (calc(100% / 3.1), 100%);
+                background-image: url(../images/sea.jpg);
+                @include bgCoverCenter;
+                @include flexCenter;
+                @include _500{
+                    @include blockSize (100%, calc(100% / 3.1));
+                }
+                &__conteiner{
+                    @include conteinerAbout;
+                    &__button{
+                        @include buttonMain;
+                        @include fontChange($mainColor, 10px, 400);
+                        background-color: $secondColor;
+                        border-color: $secondColor;
+                        text-transform: uppercase;
+                        @include _500{
+                            width: 50%;
+                        }
+                    }
+                    &__tittle{
+                        font-family: $mainFontFamily;
+                        @include fontChange($mainColor, 24px, 700);
+                    }
+                    &__discription{
+                        font-family: $secondFontFamily;
+                        @include fontChange($thirthTittleColor, 14px, 300);
+                        padding: $paddingTotal;
+                    }
+                }
+            }
+        }
+    }
+    &__partners{
+        @include flexCenter;
+        flex-direction: column;
+        @include _768{
+            width: 80%;
+            margin: 0 auto;
+        }
+        &__tittle{
+            width: 100%;
+            @include textMainTittle;
+        }
+        &__content{
+            @include blockSize (100%, 100%);
+            display: flex;
+            justify-content: space-between;
+            padding: 0 0 20px;
+            @include _768{
+                flex-wrap: wrap;
+            }
+            &__part01{
+                @include partnersPart;
+                &__image{
+                    @include avatar;
+                    background-image: url(../images/avatar_01.jpg);
+                }
+                &__image::after{
+                    @include avatarAfter;
+                    background-color: #667DF3;
+                    background-image: url(../images/music2.svg);
+                }
+                &__name{
+                    @include namePartner;
+                }
+                &__about{
+                    @include aboutPartner;
+                }
+            }
+            &__part02{
+                @include partnersPart;
+                &__image{
+                    @include avatar;
+                    background-image: url(../images/avatar_02.jpg);
+                }
+                &__image::after{
+                    @include avatarAfter;
+                    background-color: $secondColor;
+                    background-image: url(../images/Shape.svg);
+                }
+                &__name{
+                    @include namePartner;
+                }
+                &__about{
+                    @include aboutPartner;
+                }
+            }
+            &__part03{
+                @include partnersPart;
+                &__image{
+                    @include avatar;
+                    background-image: url(../images/avatar_03.jpg);
+                }
+                &__image::after{
+                    @include avatarAfter;
+                    background-color: #19D4CA ;
+                    background-image: url(../images/camera.svg);
+                }
+                &__name{
+                    @include namePartner;
+                }
+                &__about{
+                    @include aboutPartner;
+                }
+            }
+            &__part04{
+                @include partnersPart;
+                &__image{
+                    @include avatar;
+                    background-image: url(../images/avatar_04.jpg);
+                }
+                &__image::after{
+                    @include avatarAfter;
+                    background-color: #FFA710;
+                    background-image: url(../images/airplane.svg);
+                }
+                &__name{
+                    @include namePartner;
+                }
+                &__about{
+                    @include aboutPartner;
+                }
+            }
+        }
+        &__button{
+            @include buttonMain;
+            color: $secondColor;
+            border-color: $secondColor;
+        }
+    }
+    &__ideas{
+        &__tittle{
+            @include textMainTittle;
+        }
+        &__content{
+            @include blockSize (100%, 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: space-between;
+            &__part01{
+                @include ideasPart;
+                &__photo01{
+                    @include ideasPhoto;
+                    background-image: url(../images/sport.jpg);
+                    &__tittle{
+                        @include ideasTittle;
+                    }
+                }
+                &__photo02{
+                    @include ideasPhoto;
+                    background-image: url(../images/wellness.jpg);
+                    &__tittle{
+                        @include ideasTittle;
+                    }
+                }
+                &__photo03{
+                    @include ideasPhoto;
+                    background-image: url(../images/extreme.jpg);
+                    &__tittle{
+                        @include ideasTittle;
+                    }
+                }
+            }
+            &__part02{
+                @include ideasPart;
+                &__photo04{
+                    @include ideasPhoto;
+                    background-image: url(../images/games.jpg);
+                    &__tittle{
+                        @include ideasTittle;
+                    }
+                }
+                &__photo05{
+                    @include ideasPhotoBig;
+                    background-image: url(../images/culture.jpg);
+                    &__tittle{
+                        @include ideasTittle;
+                    }
+                }
+            }
+            &__part03{
+                @include ideasPart;
+                &__photo06{
+                    @include ideasPhotoBig;
+                    background-image: url(../images/relaxation.jpg);
+                    &__tittle{
+                        @include ideasTittle;
+                    }
+                }
+                &__photo07{
+                    @include ideasPhoto;
+                    background-image: url(../images/travel.jpg);
+                    &__tittle{
+                        @include ideasTittle;
+                    }
+                }
+            }
+        }
+    }
+    &__search{
+        @include flexCenter;
+        flex-direction: column;
+        @include _370{
+            flex-wrap: wrap;
+        }
+        &__tittle{
+            @include textMainTittle;
+        }
+        &__label{
+            @include fontChange ($secondTitleColor, 18px, 300);
+            font-family: $secondFontFamily;
+            padding: $paddingTotal;
+        }
+        &__inputs{
+            &__button{
+                @include buttonMain;
+                color: $mainColor;
+                background-color: $secondColor;
+                border-color: $secondColor;
+                @include _370{
+                    width: 100%;
+                    margin: 10px 0;
+                }
+            }
+            #interest-search{
+                @include inputMain;
+            }
+        }
+    }
+}

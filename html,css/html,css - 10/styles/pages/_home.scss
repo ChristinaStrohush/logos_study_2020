@@ -1,0 +1,141 @@
+.main{
+    @include boxSize(100%, 35vh);
+    font-family: $mainFontFamily;
+    background-color: $mainBgColor;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    &__box{
+        @include iconBoxSize;
+        font-size: $iconSize;
+        text-align: center;
+        color: $iconTextColor;
+        background-color: $elementBgColor;
+        @include flexCenter;
+        border: 1px solid rgba(49, 49, 56, 0.1);
+        &__span{
+            @include boxSize(0px, 100%);
+            display: block;
+            overflow: hidden;
+            &__title{
+                font-size: $iconHoverSize;
+            }
+            &__discription{
+                font-size: $mainFontSize;
+            }
+        }
+    }
+}
+
+.twitter:hover{
+    width: 330px;
+    display: flex;
+    border: $hoverBd;
+}
+.twitter:hover i{
+    @include iconBoxSize;
+    font-size: $iconHoverSize;
+    background-color: rgb(0, 162, 255);
+    @include flexCenter;
+}
+.twitter:hover span{
+    @include discriptionBoxSize;
+    background-color: $textBgColor;
+    color: $textColor;
+}
+.facebook:hover{
+    width: 330px;
+    display: flex;
+    border: $hoverBd;
+}
+.facebook:hover i{
+    @include iconBoxSize;
+    font-size: $iconHoverSize;
+    background-color: rgb(14, 56, 192);
+    @include flexCenter;
+}
+.facebook:hover span{
+    @include discriptionBoxSize;
+    background-color: $textBgColor;
+    color: $textColor;
+}
+.linkedin:hover{
+    width: 330px;
+    display: flex;
+    border: $hoverBd;
+}
+.linkedin:hover i{
+    @include iconBoxSize;
+    font-size: $iconHoverSize;
+    background-color: rgb(17, 17, 19);
+    @include flexCenter;
+}
+.linkedin:hover span{
+    @include discriptionBoxSize;
+    background-color: $textBgColor;
+    color: $textColor;
+}
+.instagram:hover{
+    width: 330px;
+    display: flex;
+    border: $hoverBd;
+}
+.instagram:hover i{
+    @include iconBoxSize;
+    font-size: $iconHoverSize;
+    background-color: rgb(255, 7, 255);
+    @include flexCenter;
+}
+.instagram:hover span{
+    @include discriptionBoxSize;
+    background-color: $textBgColor;
+    color: $textColor;
+}
+.youtube:hover{
+    width: 330px;
+    display: flex;
+    border: $hoverBd;
+}
+.youtube:hover i{
+    @include iconBoxSize;
+    font-size: $iconHoverSize;
+    background-color: darkred;
+    @include flexCenter;
+}
+.youtube:hover span{
+    @include discriptionBoxSize;
+    background-color: $textBgColor;
+    color: $textColor;
+}
+.tumblr:hover{
+    width: 330px;
+    display: flex;
+    border: $hoverBd;
+}
+.tumblr:hover i{
+    @include iconBoxSize;
+    font-size: $iconHoverSize;
+    background-color: rgb(28, 189, 28);
+    @include flexCenter;
+}
+.tumblr:hover span{
+    @include discriptionBoxSize;
+    background-color: $textBgColor;
+    color: $textColor;
+}
+.dribbble:hover{
+    width: 330px;
+    display: flex;
+    border: $hoverBd;
+}
+.dribbble:hover i{
+    @include iconBoxSize;
+    font-size: $iconHoverSize;
+    background-color: rgb(218, 0, 134);
+    @include flexCenter;
+}
+.dribbble:hover span{
+    @include discriptionBoxSize;
+    background-color: $textBgColor;
+    color: $textColor;
+}

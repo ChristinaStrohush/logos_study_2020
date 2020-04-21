@@ -1,0 +1,196 @@
+@mixin fontChange ($clr, $fnt-sz, $fnt-wght) {
+    color: $clr;
+    font-size: $fnt-sz;
+    font-weight: $fnt-wght;
+}
+
+@mixin blockSize ($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin textMainTittle {
+    font-family: $mainFontFamily;
+    @include fontChange($mainTittleColor, 26px, 700);
+    text-align: center;
+    padding: 60px 0 20px;
+    @include _768{
+        font-size: 22px;
+    }
+}
+
+@mixin logoTop {
+    font-family: $mainFontFamily;
+    @include fontChange($mainColor, 20px, 700);
+    text-transform: uppercase;
+}
+
+@mixin mainLinkFooter {
+    font-family: $mainFontFamily;
+    @include fontChange($mainTittleColor, 14px, 700);
+    text-decoration: none;
+}
+
+@mixin secondLinkFooter {
+    font-family: $secondFontFamily;
+    @include fontChange($inputColor, 14px, 300);
+    @include _500{
+        width: 100%;
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@mixin logoDown {
+    font-family: $mainFontFamily;
+    @include fontChange($secondColor, 20px, 300);
+    text-transform: uppercase;
+    @include _500{
+        padding: $paddingTotal;
+    }
+}
+
+@mixin textTittleHeader {
+    font-family: $mainFontFamily;
+    @include fontChange($mainColor, 52px, 700);
+    text-transform: uppercase;
+}
+
+@mixin buttonMain {
+    font-family: $mainFontFamily;
+    border-width: 2px; 
+    border-style: solid;
+    border-radius: 20px;
+    padding: 6px 30px;
+}
+
+@mixin inputMain {
+    font-family: $secondFontFamily;
+    border: 1px solid $inputColorBorder;
+    @include fontChange ($inputColor, 14px, 300);
+    padding: 6px 100px 6px 6px;
+    @include _500{
+        padding: 6px 30px 6px 6px;  
+    }
+    @include _370{
+        width: 100%;
+    }
+}
+
+@mixin conteinerAbout{
+    @include blockSize (80%, 90%);
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin partnersPart {
+    @include blockSize (200px, 100%);
+    padding: 10px;
+    @include flexCenter;
+    flex-direction: column;
+    text-align: center;
+    @include _768{
+        width: 50%;
+    }
+    @include _370{
+        width: 100%;
+    }
+}
+
+@mixin bgCoverCenter {
+    background-size: cover;
+    background-position: center;
+}
+
+@mixin avatar{
+    @include blockSize (120px, 120px);
+    @include bgCoverCenter;
+    border-radius: 50%;
+    position: relative;
+}
+
+@mixin avatarAfter {
+    display: block;
+    @include blockSize (35px, 35px);
+    content: '';
+    border-radius: 50%;
+    border: 2px solid $mainColor;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 85px;
+    left: 85px;
+}
+
+@mixin namePartner {
+    @include fontChange (#444, 14px, 700);
+    font-family: $mainFontFamily;
+    padding: $paddingTotal;
+}
+
+@mixin aboutPartner {
+    @include fontChange(#666, 14px, 300);
+    font-family: $secondFontFamily;
+}
+
+@mixin ideasPart {
+    @include blockSize (100%, 300px);
+    display: flex;
+    justify-content: space-between;
+    @include _500{
+        @include blockSize (100%, 100%);
+        flex-wrap: wrap;
+    }
+}
+
+@mixin ideasPhoto{
+    @include blockSize (32%, 94%);
+    @include bgCoverCenter;
+    @include flexCenter;
+    @include _500{
+        @include blockSize (100%, 150px);
+        margin: 7px 0;
+    }
+}
+
+@mixin ideasPhotoBig{
+    @include blockSize (66%, 94%);
+    @include bgCoverCenter;
+    @include flexCenter;
+    @include _500{
+        @include blockSize (100%, 150px);
+        margin: 7px 0;
+    }
+}
+
+@mixin ideasTittle {
+    font-family: $mainFontFamily;
+    @include fontChange($mainColor, 22px, 700);
+    text-shadow: 3px 1px 7px $secondTitleColor;
+    text-align: center;
+}
+
+@mixin _768 {
+    @media (max-width: 768px){
+        @content;
+    }
+}
+
+@mixin _500 {
+    @media (max-width: 500px){
+        @content;
+    }
+}
+
+@mixin _370 {
+    @media (max-width: 370px){
+        @content;
+    }
+}

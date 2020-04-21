@@ -1,0 +1,4 @@
+.footer{
+    @include boxSize(100%, 45vh);
+    background-color: $headBgColor;
+}
