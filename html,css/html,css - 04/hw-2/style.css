@@ -1,0 +1,122 @@
+body{
+    margin: 0px;
+}
+
+@font-face{
+    font-family: "Inconsolata Bold";
+    src:
+    url(/fonts/inconsolata-bold-webfont.woff) format("woff"),
+    url(/fonts/inconsolata-bold-webfont.woff2) format("woff2");
+}
+
+@font-face{
+    font-family: "Inconsolata Regular";
+    src:
+    url(/fonts/inconsolata-regular-webfont.woff) format("woff"),
+    url(/fonts/inconsolata-regular-webfont.woff2) format("woff2");
+}
+
+@font-face{
+    font-family: "Lato Black";
+    src:
+    url(/fonts/lato-black-webfont.woff) format("woff")
+    url(/fonts/lato-black-webfont.woff2) format("woff2");
+}
+
+@font-face{
+    font-family: "Lato Regular";
+    src:
+    url(/fonts/lato-regular-webfont.woff) format("woff"),
+    url(/fonts/lato-regular-webfont.woff2) format("woff2");
+}
+
+.header{
+    height: 60px;
+    font-family: 'Lato Black', sans-serif;
+    font-weight: 900;
+    background-color: #eee;
+}
+
+.content{
+    width: 960px;
+    margin: 0px auto;
+}
+
+.header_title{
+    color: #c91d1d;
+    line-height: 60px;
+    text-align: center;
+    font-size: 2em;
+    text-transform: capitalize;
+}
+
+.block{
+    height: 500px;
+    margin-top: 40px;
+    overflow: auto;
+}
+
+.block_logo{
+    width: 500px;
+    float: left;
+    overflow: hidden;
+}
+
+.block_logo img{
+    width: 98%;
+    border: 4px double #eee;
+}
+
+.block_logo_small{
+    width: 106px;
+    float: left;
+    margin-top: 30px;
+    margin-left: calc((494px - (106px * 4)) / (4 - 1) / 2);
+    margin-right: calc((494px - (106px * 4)) / (4 - 1) / 2);
+}
+
+.block_logo_small_first{
+    margin-left: 0px;
+}
+
+.block_logo_small_last{
+    margin-right: 0px;
+}
+
+.block_text{
+    width: 400px;
+    font-family: 'Inconsolata', sans-serif;
+    font-weight: normal;
+    font-size: .8em;
+    line-height: 20px;
+    text-align: justify;
+    color: #222;
+    float: right;
+}
+
+.block_text hr{
+    border: none;
+    color: #c91d1d;
+    background-color: #c91d1d;
+    height: 2px;
+}
+
+.block_text_title{
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.header_title:hover{
+    color: green;
+}
+
+img:hover{
+    border: 4px solid #c91d1d;
+}
+
+.block_text_title:hover{
+    font-family: 'Georgio';
+    font-weight: 600;
+    font-size: 3em;
+    background: lightseagreen;
+}

@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: "Bahij Sultannahia";
+    src: 
+    url(fonts/bahij-sultannahia-webfont.woff) format("woff"),
+    url(fonts/bahij-sultannahia-webfont.woff2) format("woff2");
+}
+
+@font-face{
+    font-family: "ChronicaPro Regular";
+    src: 
+    url(fonts/chronicapro-regular-webfont.woff) format("woff"),
+    url(fonts/chronicapro-regular-webfont.woff2) format("woff2");
+}
+
+header{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.menu{
+    width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu a{
+    text-decoration: none;
+    font-family: 'Bahij Sultannahia', sans-serif;
+    font-weight: normal;
+    font-size: 1.1em;
+    color: #3d3d3d;
+    text-align: center;
+}
+
+.menu a:hover{
+    color: blue;
+}
+
+.menu a:last-child{
+    color: blue;
+}
+
+main{
+    width: 1200px;
+    height: 550px;
+    background: #eee;
+    border-radius: 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table{
+    width: 850px;
+    height: 300px;
+    font-family: "Bahij Sultannahia", sans-serif;
+    text-align: center;
+    font-weight: normal;
+    color: #3d3d3d;
+}
+
+thead{
+    font-size: 1.2em;
+}
+
+tbody{
+    font-size: 0.9em;
+}
+
+tbody a{
+    width: 25px;
+    height: 25px;
+    display: block;
+    border: 1px solid #888;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #3d3d3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.download{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+tbody a:hover{
+    background-color: blue;
+    color: white;
+}

@@ -1,0 +1,31 @@
+.menushka {
+    width: 900px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.menu {
+    width: 20%;
+    height: 100px;
+    float: left;
+}
+
+.m1 {
+    background-color: #5f9ea0;
+}
+
+.m2 {
+    background-color: #6495ed;
+}
+
+.m3 {
+    background-color: #f5deb3;
+}
+
+.m4 {
+    background-color: #f08080;
+}
+
+.m5 {
+    background-color: #4b0082;
+}

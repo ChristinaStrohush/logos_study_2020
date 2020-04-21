@@ -1,0 +1,39 @@
+.left {
+    background-color: #008000;
+}
+
+.text {
+    width: 150px;
+    height: 70px;
+    margin: 10px auto 0px auto;
+    background-color: #c0c0c0;
+}
+
+.text p {
+    margin: 0px;
+    padding: 26px 20px;
+}
+
+.chysla {
+    width: 130px;
+    margin: 20px auto 0px auto;
+}
+
+.three {
+    height: 60px;
+    background-color: #8b0000;
+}
+
+.cyfry {
+    width: 50%;
+    height: 110px;
+    float: left;
+}
+
+.four {
+    background-color: #fa8072;
+}
+
+.five {
+    background-color: #bdb76b;
+}

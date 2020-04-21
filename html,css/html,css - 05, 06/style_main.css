@@ -1,0 +1,337 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: "Bahij Sultannahia";
+    src: 
+    url(fonts/bahij-sultannahia-webfont.woff) format("woff"),
+    url(fonts/bahij-sultannahia-webfont.woff2) format("woff2");
+}
+
+@font-face{
+    font-family: "ChronicaPro Regular";
+    src: 
+    url(fonts/chronicapro-regular-webfont.woff) format("woff"),
+    url(fonts/chronicapro-regular-webfont.woff2) format("woff2");
+}
+
+header{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.menu{
+    width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu a{
+    text-decoration: none;
+    font-family: 'Bahij Sultannahia';
+    font-weight: normal;
+    font-size: 1.1em;
+    color: #3d3d3d;
+    text-align: center;
+}
+
+.menu a:hover{
+    color: blue;
+}
+
+.menu a:first-child{
+    color: blue;
+}
+
+main{
+    width: 1200px;
+    height: 550px;
+    background: #eee;
+    border-radius: 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+}
+
+aside{
+    width: 150px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aside_nav{
+    width: 100px;
+    height: 400px;
+    background: white; 
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.aside_nav a{
+    width: 40px;
+    height: 35px;
+    display: block;
+    text-align: center;
+    font-size: 1.7em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #3d3d3d;
+}
+
+.uil:hover{
+    color: white;
+    background-color: blue;
+    border-radius: 5px;
+}
+
+.uil-folder{
+    color: white;
+    background-color: blue;
+    border-radius: 5px;
+    position: relative;
+}
+
+.uil-folder::after{
+    content: 'Project';
+    display: block;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    font-size: 0.7em;
+    font-style: normal;
+    position: absolute;
+    top: 0;
+    right: -93px;
+    border-radius: 5px;
+    transition: 0.7s;
+}
+
+.uil-folder:hover::after{
+    width: 100px;
+    background-color: blue;
+}
+
+.uil-monitor{
+    position: relative;
+}
+
+.uil-monitor::after{
+    content: 'Account';
+    display: block;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    font-size: 0.7em;
+    font-style: normal;
+    position: absolute;
+    top: 0;
+    right: -93px;
+    border-radius: 5px;
+    transition: 0.7s;
+}
+
+.uil-monitor:hover::after{
+    width: 100px;
+    background-color: blue;
+}
+
+.uil-users-alt{
+    position: relative;
+}
+
+.uil-users-alt::after{
+    content: 'Groups';
+    display: block;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    font-size: 0.7em;
+    font-style: normal;
+    position: absolute;
+    top: 0;
+    right: -93px;
+    border-radius: 5px;
+    transition: 0.7s;
+}
+
+.uil-users-alt:hover::after{
+    width: 100px;
+    background-color: blue;
+}
+
+.uil-cloud-share{
+    position: relative;
+}
+
+.uil-cloud-share::after{
+    content: 'Cloud';
+    display: block;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    font-size: 0.7em;
+    font-style: normal;
+    position: absolute;
+    top: 0;
+    right: -93px;
+    border-radius: 5px;
+    transition: 0.7s;
+}
+
+.uil-cloud-share:hover::after{
+    width: 100px;
+    background-color: blue;
+}
+
+.uil-cog{
+    position: relative;
+}
+
+.uil-cog::after{
+    content: 'Setting';
+    display: block;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    font-size: 0.7em;
+    font-style: normal;
+    position: absolute;
+    top: 0;
+    right: -93px;
+    border-radius: 5px;
+    transition: 0.7s;
+}
+
+.uil-cog:hover::after{
+    width: 100px;
+    background-color: blue;
+}
+
+section{
+    width: 1050px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.section_main{
+    width: 1000px;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section_main_part{
+    width: 475px;
+    height: 150px;
+    background: white;
+    border: 20px solid #fff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.section_other{
+    width: 1000px;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.section_other_part_left{
+    width: 650px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section_other_part_left_part01{
+    width: 100%;
+    height: 140px;
+    background: white;
+    border: 20px solid #fff;
+    border-radius: 20px;
+}
+
+.section_other_part_left_part02{
+    width: 100%;
+    height: 140px;
+    background: white;
+    border: 20px solid #fff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.section_other_part_left_part02_img{
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.section_other_part_left_part02_img img{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: calc(50% - 40px);
+    left: calc(50% - 40px);
+}
+
+.section_other_part_right{
+    width: 300px;
+    height: 300px;
+    border: 20px solid #fff;
+    background: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.section_other_part_right_img{
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.section_other_part_right_img img{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: calc(50% - 40px);
+    left: calc(50% - 40px);
+}
+
+p{
+    font-family: 'ChronicaPro Regular';
+    font-weight: normal;
+    font-size: 0.7em;
+    color: #aaa;
+    line-height: 18px;
+}
+
+h2, h3{
+    font-family: 'Bahij Sultannahia';
+    font-weight: normal;
+    color: #3d3d3d;
+}
+

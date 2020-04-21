@@ -1,0 +1,99 @@
+.rymski {
+    width: 300px;
+    height: 25px;
+}
+
+.rome {
+    width: 100px;
+    height: 25px;
+    float: left;
+}
+
+.ri {
+    background-color: #8fbc8f;
+}
+
+.rii {
+    background-color: #da70d6;
+}
+
+.riii {
+    background-color: #ff7f50;
+}
+
+.kvadrat {
+    width: 300px;
+    height: 40px;
+    background-color: #faf0e6;
+}
+
+.small {
+    width: 120px;
+    height: 20px;
+    margin: auto;
+    background-color: #ff0000;
+}
+
+.mini {
+    width: 18px;
+    height: 6px;
+    margin: auto;
+    background-color: black;
+}
+
+.rvi {
+    width: 300px;
+    height: 40px;
+    background-color: #dcdcdc;
+}
+
+.rchysla {
+    width: 300px;
+    height: 165px;
+}
+
+.rchyslo {
+    float: left;
+}
+
+.rvii {
+    width: 100px;
+    height: 165px;
+    background-color: #2f4f4f;
+}
+
+.rx {
+    width: 200px;
+    height: 165px;
+}
+
+.rviii {
+    width: 200px;
+    height: 55px;
+    background-color: #708090;
+}
+
+.rde {
+    width: 200px;
+    height: 55px;
+}
+
+.rixx {
+    width: 100px;
+    height: 55px;
+    float: left;
+}
+
+.rix {
+    background-color: #8a2be2;
+}
+
+.rxx {
+    background-color: #fafad2;
+}
+
+.rxi {
+    width: 200px;
+    height: 55px;
+    background-color: #dda0dd;
+}

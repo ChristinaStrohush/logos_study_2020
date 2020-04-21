@@ -1,0 +1,823 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.lifestyle{
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px){
+    .lifestyle{
+        display: none;
+    }
+}
+
+.header{
+    width: 100%;
+    height: 100vh;
+}
+
+@media screen and (min-width: 320px) and (max-width: 970px){
+    .header{
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .header{
+        height: 100vh;
+    }
+}
+
+.header__nav{
+    width: 100%;
+    height: 104px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.header__nav__burger{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 2%;
+    top: 35%;
+}
+
+.header__nav__burger::before{
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url(images/bars.svg);
+    background-color: white;
+}
+
+[type="checkbox"]:checked+div{
+    width: 300px;
+}
+
+.header__nav__menu{
+    width: 0;
+    height: 250px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: white;
+    position: absolute;
+    left: 2%;
+    top: 100%;
+    transition: 1s;
+}
+
+.header__nav__menu a{
+    display: block;
+    width: 100%;
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0px 68px;
+}
+
+.header__logo{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 30px 0;
+}
+
+.header__title{
+    height: calc(100% - 104px);
+    display: flex;
+}
+
+
+@media screen and (max-width: 320px){
+    .header__title{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100vw;
+    }
+}
+
+
+.header__title__picture{
+    width: 50%;
+    background-image: url(images/philip-martin-5aGUyCW_PJw-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.header__title__discription{
+    width: 50%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 320px){
+    .header__title__picture{
+        width: 100vw;
+        height: 50%;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .header__title__discription{
+        width: 100vw;
+        height: 50%;
+        font-size: 0.5rem;
+    }
+}
+
+.header__title__discription__text{
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+}
+
+.header__title__discription__text p{
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 500px){
+    .header__title__discription__text p{
+        font-size: 0.8rem;
+    } 
+}
+
+@media screen and (max-width: 400px){
+    .header__title__discription__text p{
+        font-size: 0.6rem;
+    } 
+}
+
+.header__title__discription__text h2{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px){
+    .header__title__discription__text h2{
+        font-size: 1.1rem;
+        font-weight: 500;
+    } 
+}
+
+.title_date{
+    font-size: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.header__title__discription__text button{
+    width: 50%;
+    color: white;
+    font-size: 0.9rem;
+    background-color: transparent;
+    border: 1px solid #fff;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+@media screen and (max-width: 650px) and (min-width: 320px){
+    .header__title__discription__text button{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .header__title__discription__text button{
+        width: 70%;
+        font-size: 0.8rem;
+    }
+}
+
+.main{
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media screen and (min-width:321px) and (max-width: 970px){
+    .main{
+        width: 93%;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .main{
+        width: 96%;
+    }
+}
+
+.main__featured{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main__featured__two h3{
+    font-weight: 700;
+    padding: 20px 0 10px 0;
+}
+
+.main__featured__two__content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 320px){
+    .main__featured__two__content{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.main__featured__two__content__left{
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 320px){
+    .main__featured__two__content__left{
+        width: 100%;
+    }
+}
+
+.main__featured__two__content__left__picture{
+    height: 300px;
+    background-image: url(images/Screen\ Shot\ 2560-08-18\ at\ 4.23.48\ PM.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (max-width: 600px){
+    .main__featured__two__content__left__picture{
+        height: 200px;
+    }
+}
+
+.main__featured__two__content__left__text{
+    color: #1F1F1D;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.main_date{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 450px){
+    .main_date{
+        font-size: 0.8rem;
+    }
+}
+
+.main__featured__two__content__right{
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 320px){
+    .main__featured__two__content__right{
+        width: 100%;
+    }
+}
+
+.main__featured__two__content__right__picture{
+    height: 300px;
+    background-image: url(images/biocarbon-drone.jpg.650x0_q70_crop-smart.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (max-width: 600px){
+    .main__featured__two__content__right__picture{
+        height: 200px;
+    }
+}
+
+.main__featured__two__content__right__text{
+    color: #1F1F1D;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.main__featured__three{
+    color: #1F1F1D;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main__featured__three p{
+    font-size: 0.8em;
+    padding: 10px 0;
+}
+
+.main__featured__three h4{
+    font-weight: 500;
+    padding: 0 0 10px 0;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 450px) and (max-width: 850px){
+    .main__featured__three h4{
+        font-weight: 300;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .main__featured__three h4{
+        font-weight: 300;
+        font-size: 0.7rem;
+    }
+}
+
+.main__featured__three__01,
+.main__featured__three__02,
+.main__featured__three__03{
+    width: calc(100% / 3.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.main__featured__three__01_picture{
+    height: 200px;
+    background-image: url(images/img-1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (min-width: 550px) and (max-width: 700px){
+    .main__featured__three__01_picture{
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 549px){
+    .main__featured__three__01_picture{
+        height: 100px;
+    }
+}
+
+.main__featured__three__02_picture{
+    height: 200px;
+    background-image: url(images/img-2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (min-width: 550px) and (max-width: 700px){
+    .main__featured__three__02_picture{
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 549px){
+    .main__featured__three__02_picture{
+        height: 100px;
+    }
+}
+
+.main__featured__three__03_picture{
+    height: 200px;
+    background-image: url(images/img-3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (min-width: 550px) and (max-width: 700px){
+    .main__featured__three__03_picture{
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 549px){
+    .main__featured__three__03_picture{
+        height: 100px;
+    }
+}
+
+.main__featured__button{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.see_all{
+    width: 20%;
+    height: 50%;
+    padding: 10px;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: #222;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (min-width: 351px) and (max-width: 650px){
+    .see_all{
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 350px){
+    .see_all{
+        width: 80%;
+    }
+}
+
+.main__proposion{
+    width: 100%;
+    display: flex;
+}
+
+@media screen and (max-width: 320px){
+    .main__proposion{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.main__proposion__picture{
+    width: 50%;
+    height: 300px;
+    background-image: url(images/photo-1520781359717-3eb98461c9fe.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (max-width: 600px){
+    .main__proposion__picture{
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .main__proposion__picture{
+        width: 100%;
+    }
+}
+
+.main__proposion__text{
+    width: 50%;
+    height: 300px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 600px){
+    .main__proposion__text{
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .main__proposion__text{
+        width: 100%;
+    }
+}
+
+.main__proposion__text__content{
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+}
+
+.main__proposion__text__content h2{
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px){
+    .main__proposion__text__content h2{
+        font-size: 1.1rem;
+        font-weight: 500;
+    } 
+}
+
+.main__proposion__text__content button{
+    width: 50%;
+    color: white;
+    font-size: 0.9rem;
+    background-color: transparent;
+    border: 1px solid #fff;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+@media screen and (max-width: 800px) and (min-width: 401px){
+    .main__proposion__text__content button{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) and (min-width: 321px){
+    .main__proposion__text__content button{
+        width: 100%;
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .main__proposion__text__content button{
+        width: 70%;
+        font-size: 0.8rem;
+    }
+}
+
+.main__interviews{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main__interviews h3{
+    font-weight: 700;
+    padding: 20px 0 10px 0;
+}
+
+.main__interviews__three{
+    color: #1F1F1D;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main__interviews__three p{
+    font-size: 0.8em;
+    padding: 10px 0;
+}
+
+.main__interviews__three h4{
+    font-weight: 500;
+    padding: 0 0 10px 0;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 450px) and (max-width: 850px){
+    .main__interviews__three h4{
+        font-weight: 300;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .main__interviews__three h4{
+        font-weight: 300;
+        font-size: 0.7rem;
+    }
+}
+
+.main__interviews__three__01,
+.main__interviews__three__02,
+.main__interviews__three__03{
+    width: calc(100% / 3.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.main__interviews__three__01_picture{
+    height: 200px;
+    background-image: url(images/img-5.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (min-width: 550px) and (max-width: 700px){
+    .main__interviews__three__01_picture{
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 549px){
+    .main__interviews__three__01_picture{
+        height: 100px;
+    }
+}
+
+.main__interviews__three__02_picture{
+    height: 200px;
+    background-image: url(images/img-6.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (min-width: 550px) and (max-width: 700px){
+    .main__interviews__three__02_picture{
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 549px){
+    .main__interviews__three__02_picture{
+        height: 100px;
+    }
+}
+
+.main__interviews__three__03_picture{
+    height: 200px;
+    background-image: url(images/img-7.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (min-width: 550px) and (max-width: 700px){
+    .main__interviews__three__03_picture{
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 549px){
+    .main__interviews__three__03_picture{
+        height: 100px;
+    }
+}
+
+.main__interviews__button{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__news{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main__news h3{
+    font-weight: 700;
+    padding: 20px 0 10px 0;
+}
+
+.main__news__three{
+    color: #1F1F1D;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main__news__three p{
+    font-size: 0.8em;
+    padding: 10px 0;
+}
+
+.main__news__three h4{
+    font-weight: 500;
+    padding: 0 0 10px 0;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 450px) and (max-width: 850px){
+    .main__news__three h4{
+        font-weight: 300;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .main__news__three h4{
+        font-weight: 300;
+        font-size: 0.7rem;
+    }
+}
+
+.main__news__three__01,
+.main__news__three__02,
+.main__news__three__03{
+    width: calc(100% / 3.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.main__news__three__01_picture{
+    height: 200px;
+    background-image: url(images/Screen\ Shot\ 2560-08-18\ at\ 4.38.56\ PM\ Copy\ 5.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (min-width: 550px) and (max-width: 700px){
+    .main__news__three__01_picture{
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 549px){
+    .main__news__three__01_picture{
+        height: 100px;
+    }
+}
+
+.main__news__three__02_picture{
+    height: 200px;
+    background-image: url(images/Screen\ Shot\ 2560-08-18\ at\ 4.38.56\ PM\ Copy\ 6.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (min-width: 550px) and (max-width: 700px){
+    .main__news__three__02_picture{
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 549px){
+    .main__news__three__02_picture{
+        height: 100px;
+    }
+}
+
+.main__news__three__03_picture{
+    height: 200px;
+    background-image: url(images/Screen\ Shot\ 2560-08-18\ at\ 4.39.04\ PM\ Copy\ 3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (min-width: 550px) and (max-width: 700px){
+    .main__news__three__03_picture{
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 549px){
+    .main__news__three__03_picture{
+        height: 100px;
+    }
+}
+
+.main__news__button{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer{
+    width: 100%;
+    height: 130px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__logo{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+}
+
+.footer__logo__svg{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__designed{
+    height: 40%;
+    color: white;
+    font-size: 0.7em;
+    font-weight: 300;
+}

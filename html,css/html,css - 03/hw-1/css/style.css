@@ -1,0 +1,31 @@
+div {
+    width: 300px;
+    max-width: 300px;
+    min-width: 200px;
+    height: 150px;
+    margin: 10px auto 10px auto;
+}
+
+.blue {
+    
+    background-color: #00eaff;
+}
+
+.yellow {
+    background-color: #ffea00;
+    border: 1.5px dotted red;
+}
+
+.one {
+    border: 2px dashed red;
+}
+
+.two {
+    border: 20px inset blue;
+}
+
+.three {
+    border-left-color: black;
+    border-left-style: solid;
+    border-left-width: 8px;
+}

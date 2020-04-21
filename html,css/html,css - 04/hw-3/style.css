@@ -1,0 +1,228 @@
+body{
+    margin: 0px;
+}
+
+/* ШАПКА */
+
+.header{
+    height: 80px;
+    background: #fff;
+}
+
+.content{
+    width: 960px;
+    margin: 0px auto;
+}
+
+.header_title{
+    float: left;
+    height: 80px;
+    width: 350px;
+    font-size: 2em;
+    font-weight: 600;
+    color: #222;
+    line-height: 80px;
+    margin-left: 10px;
+}
+
+.header_title:active{
+    color: rgb(9, 255, 0);
+    font-size: 3em;
+}
+
+.clear{
+    clear: both;
+}
+
+/* МЕНЮ В ШАПЦІ */
+
+.header_menu{
+    float: right;
+}
+
+.header_menu ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    line-height: 80px;
+}
+
+.header_menu li{
+    float: right;
+    width: 100px;
+}
+
+.header_menu a{
+    display: block;
+    height: 80px;
+    color: #222;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    font-size: .9em;
+    font-weight: 600;
+    border-right: 1px solid #eee;
+}
+
+.header_menu li:first-child a{
+    border-right: 0;
+}
+
+.header_menu a:hover{
+    background: #eee;
+    color: #222;
+    font-size: 1.1em;
+}
+
+.header_menu_about{
+    position: relative;
+}
+
+.header_menu_about_drop{
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    opacity: 0;
+}
+
+.header_menu_about:hover .header_menu_about_drop{
+    opacity: 1;
+    top: 100%;
+}
+
+.header_menu_about_drop ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.header_menu_about_drop li{
+    width: 100px;
+}
+
+.header_menu_about_drop a{
+    display: block;
+    height: 25px;
+    color: #fff;
+    text-decoration: none;
+    background: #777;
+    width: 100%;
+    text-align: center;
+    font-size: .7em;
+    font-weight: 300;
+    line-height: 25px;
+    border-bottom: 1px solid #fff;
+}
+
+.header_menu_about_drop li:last-child a{
+    border-bottom: 0;
+}
+
+/* БОКОВЕ МЕНЮ */
+/* ОСНОВНІ ПУНКТИ */
+
+.main{
+    height: 900px;
+    width: 100%;
+    background: #eee;
+    overflow: hidden;
+}
+
+.side{
+    width: 200px;
+    margin: 10px;
+}
+
+.side ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* display:block розтягує по всій висоті і ширині батьківського блоку, тобто на 200px .side */
+/* transition - анімація, перехід */
+
+.menu a{
+    text-decoration: none;
+    background: #393939;
+    color: #fff;
+    padding: 10px;
+    display: block;
+    border-bottom: 1px solid #777;
+}
+
+/* padding в hover - зміщає зверху, знизу і зліва при наведенні */
+
+.menu a:hover{
+    background-color: #777;
+    padding: 10px 0 10px 20px;
+}
+
+/* заокруглюємо границі списків по верхньому і нижньому пункті, підпункті */
+.menu li:first-child a,
+.menu li .menu_drop li:first-child a{
+    border-radius: 3px 3px 0 0;
+}
+
+.menu li:last-child a,
+.menu li .menu_drop li:last-child a{
+    border-radius: 0 0 3px 3px;
+    border-bottom: 0;
+}
+
+/* для а в .menu_drop забираємо радіус, бо він приміниться не тільки до верхнього підпункту списку з пункту 1, а до всіх підпунктів, бо воно належить до :first-child, тобто п.1 */
+/* дописуємо нижню рамку, оскільки список з останніми підпунктами застосовує властивості для :last-child */
+.menu li .menu_drop li a{
+    border-radius: 0;
+    border-bottom: 1px solid #777;
+}
+
+/* ПІДПУНКТИ */
+
+/* задаємо абсолютне позиціонування для підпунктів до їхніх пунктів */
+/* зміщаємо їх вліво на 100% цілого блоку пункту */
+/* зміщуємо вгору за межі сайту */
+/* прозорість 100%, тобто opacity:0 */
+/* щоб властивість анімації transition примінялась тільки до opacity */
+/* для того, щоб створити відступ між пунктамии і пунктами створюємо прозору границю зліва (transperent), щоб не втратилась можливість в натисканні на пункт переходу на підпункти */
+
+.menu_list{
+    position: relative;
+}
+
+.menu_drop{
+    position: absolute;
+    width: 100%;
+    left: 100%;
+    top: -9999em;
+    opacity: 0;
+    border-left: 10px solid transparent;
+    transition: 0.5s opacity;
+}
+
+/* при наведені на пункт, де є вспливаючі підпункти, до підпунків застосовуються абсолютне позиціонування по верху 0 і забирається прозорість, тобто стоють видимі підпункти */
+
+.menu_list:hover .menu_drop{
+    opacity: 1;
+    top: 0;
+}
+
+/* ІКОНКИ ДЛЯ ВСПЛИВАЮЧОГО МЕНЮ */
+
+/* псевдоелемент after - елемент, який створюється після .menu_list */
+/* рамка створюється навкого пустоти, тому складається з 4 трикутників */
+/* замість кольору якоїсь сторони рамки можемо вказати transparent, тоді ця сторона буде прозора */
+.menu_list::after{
+    content: " ";
+    position: absolute;
+    border: 10px solid;
+    border-color: turquoise red green yellow;
+    border-radius: 10px;
+    top: .5em;
+    right: .7em;
+    transition: 0.5s;
+}
+
+.menu_list:hover::after{
+    transform: scaleX(-1);
+}

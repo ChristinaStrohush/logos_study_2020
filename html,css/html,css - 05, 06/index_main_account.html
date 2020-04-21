@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Account</title>
+    <link rel="stylesheet" href="style_main_account.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.0.1/css/unicons.css">
+
+</head>
+
+<body>
+    <header>
+        <nav class="menu">
+            <a href="index_main.html">Main</a>
+            <a href="index_team.html">Team</a>
+            <a href="index_lessons.html">Lessons</a>
+        </nav>
+    </header>
+    <main>
+        <main>
+            <aside>
+                <nav class="aside_nav">
+                    <a href="*"><i class='uil uil-folder'></i></a>
+                    <a href="index_main_account.html"><i class='uil uil-monitor'></i></a>
+                    <a href="*"><i class='uil uil-users-alt'></i></a>
+                    <a href="*"><i class='uil uil-cloud-share'></i></a>
+                    <a href="*"><i class='uil uil-cog'></i></a>
+                </nav>
+            </aside>
+            <section>
+                <div class="form_left">
+                    <div class="form_left_top">
+                        <div class="form_left_top_avatar">A</div>
+                        <div class="form_left_top_name">
+                            <p class="title">Andy Cube</p>
+                            <p class="about">andycube@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="form_left_down">
+                        <div class="form_left_down_part01">
+                            <div class="form_left_down_avatar"><i class='uil uil-padlock'></i></div>
+                            <div class="form_left_down_name">
+                                <p class="title">Change Password</p>
+                                <p class="about">Pleace choose a password which is longer than 6 characters</p>
+                            </div>
+                        </div>
+                        <div class="form_left_down_part02">
+                            <form class="password">
+                                <label for="old_password">Old password</label>
+                                <input type="password" placeholder="Enter password" id="old_password" minlength="6">
+
+                                <label for="new_password">New password</label>
+                                <input type="password" placeholder="Enter password" id="new_password" minlength="6">
+
+                                <label for="confirm_password">Confirm password</label>
+                                <input type="password" placeholder="Enter password" id="confirm_password" minlength="6">
+                            </form>
+                            <form class="password_save"><input type="button" value="Save" id="password_save">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_right">
+                    <div class="form_right_part01">
+                        <div class="form_right_part01_avatar"><i class='uil uil-university'></i></div>
+                        <div class="form_right_part01_name">
+                            <p class="title">Company</p>
+                            <p class="about">Optional, but we would appreciate if you fill out these form</p>
+                        </div>
+                    </div>
+                    <div class="form_right_part02">
+                        <form class="form_right_part01_company_date">
+                            <label for="company_name">Company name</label>
+                            <input type="text" id="company_name" placeholder="Logos IT-academy">
+
+                            <label for="company_street">Company adress</label>
+                            <input type="text" id="company_street" placeholder="61 I. Franka, Lviv">
+                        </form>
+                    </div>
+                    <div class="form_right_part03">
+                        <div class="form_right_part03_col col01">
+                            <form class="form_right_part01_company_contry">
+                                <label for="country">Country</label>
+                                <input type="text" id="country" placeholder="Enter country">
+
+                                <label for="city">City</label>
+                                <input type="text" id="city" placeholder="Enter city">
+                            </form>
+                        </div>
+                        <div class="form_right_part03_col col02">
+                            <form class="form_right_part01_company_state">
+                                <label for="state">State</label>
+                                <input type="text" id="state" placeholder="Enter state">
+
+                                <label for="postal_code">Postal code</label>
+                                <input type="text" id="postal_code" placeholder="Enter postal code">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="form_right_part04">
+
+                        <form class="adress_save">
+                            <input type="button" value="Save" id="adress_save">
+                        </form>
+                    </div>
+                </div>
+                </div>
+            </section>
+        </main>
+</body>
+
+</html>

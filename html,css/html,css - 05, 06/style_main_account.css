@@ -1,0 +1,425 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: "Bahij Sultannahia";
+    src: 
+    url(fonts/bahij-sultannahia-webfont.woff) format("woff"),
+    url(fonts/bahij-sultannahia-webfont.woff2) format("woff2");
+}
+
+@font-face{
+    font-family: "ChronicaPro Regular";
+    src: 
+    url(fonts/chronicapro-regular-webfont.woff) format("woff"),
+    url(fonts/chronicapro-regular-webfont.woff2) format("woff2");
+}
+
+header{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.menu{
+    width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu a{
+    text-decoration: none;
+    font-family: 'Bahij Sultannahia';
+    font-weight: normal;
+    font-size: 1.1em;
+    color: #3d3d3d;
+    text-align: center;
+}
+
+.menu a:hover{
+    color: blue;
+}
+
+.menu a:first-child{
+    color: blue;
+}
+
+main{
+    width: 1200px;
+    height: 550px;
+    background: #eee;
+    border-radius: 20px;
+    font-family: 'Bahij Sultannahia';
+    font-weight: normal;
+    color: #3d3d3d;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+}
+
+aside{
+    width: 150px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aside_nav{
+    width: 100px;
+    height: 400px;
+    background: white; 
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.aside_nav a{
+    width: 40px;
+    height: 35px;
+    display: block;
+    text-align: center;
+    font-size: 1.7em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.uil{
+    display: block;
+    width: 90px;
+    height: 30px;
+    color: #3d3d3d;
+    position: relative;
+}
+
+.uil-folder::after{
+    content: 'Project';
+    font-style: normal;
+    font-size: 0.4em;
+    color: transparent;
+    position: absolute;
+    top: 10px;
+    right: -40px;
+}
+
+.uil-monitor::after{
+    content: 'Account';
+    font-style: normal;
+    font-size: 0.4em;
+    color: transparent;
+    position: absolute;
+    top: 10px;
+    right: -40px;
+}
+
+.uil-users-alt::after{
+    content: 'Groups';
+    font-style: normal;
+    font-size: 0.4em;
+    color: transparent;
+    position: absolute;
+    top: 10px;
+    right: -40px;
+}
+
+.uil-cloud-share::after{
+    content: 'Cloud';
+    font-style: normal;
+    font-size: 0.4em;
+    color: transparent;
+    position: absolute;
+    top: 10px;
+    right: -40px;
+}
+
+.uil-cog::after{
+    content: 'Setting';
+    font-style: normal;
+    font-size: 0.4em;
+    color: transparent;
+    position: absolute;
+    top: 10px;
+    right: -40px; 
+}
+
+.uil:hover{
+    color: white;
+    background-color: blue;
+    border-radius: 5px;
+}
+
+.uil-monitor{
+    color: white;
+    background-color: blue;
+    border-radius: 5px;
+}
+
+section{
+    width: 1050px;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.form_left{
+    width: 400px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form_left_top{
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.form_left_top_avatar{
+    width: 50px;
+    height: 50px;
+    background-color: tomato;
+    border-radius: 25px;
+    font-size: 2.3em;
+    text-align: center;
+    color: white;
+    line-height: 50px;
+}
+
+.form_left_top_name{
+    width: 270px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.form_left_down{
+    width: 100%;
+    height: 380px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.form_left_down_part01{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.form_left_down_avatar{
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.uil-padlock{
+    font-size: 2em;
+    color: white;
+    line-height: 25px;
+    text-align: center;
+}
+
+.form_left_down_name{
+    width: 270px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.form_left_down_part02{
+    width: 100%;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.password{
+    width: 80%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.form_left_down_part02 input{
+    width: 100%;
+    height: 35px;
+    border-radius: 10px;
+    font-size: 0.7em;
+    text-indent: 7px;
+    border: 0px;
+    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.35);
+}
+
+#password_save{
+    width: 90px;
+    height: 35px;
+    background-color: blue;
+    color: white;
+    border-style: none;
+    text-indent: 0px;
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+}
+
+.form_right{
+    width: 550px;
+    height: 500px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.form_right_part01{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.form_right_part01_avatar{
+    width: 50px;
+    height: 50px;
+    background-color: orange;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.uil-university{
+    font-size: 2em;
+    color: white;
+    line-height: 25px;
+    text-align: center;
+}
+
+.form_right_part01_name{
+    width: 420px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.form_right_part02{
+    width: 80%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.form_right input{
+    width: 95%;
+    height: 35px;
+    border-radius: 10px;
+    font-size: 0.7em;
+    text-indent: 7px;
+    border: 0px;
+    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.35);
+}
+
+#company_street{
+    width: 95%;
+    height: 90px;
+}
+
+.form_right_part03{
+    width: 80%;
+    height: 130px;
+    display: flex;
+}
+
+.form_right_part03_col{
+    width: 50%;
+}
+
+.form_right_part03 input{
+    width: 95%;
+    height: 35px;
+    border-radius: 10px;
+    font-size: 0.7em;
+    text-indent: 7px;
+    border: 0px;
+    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.35);
+}
+
+.col02{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.form_right_part04{
+    width: 100%;
+    height: 70px;
+    position: relative;
+}
+
+#adress_save{
+    width: 90px;
+    background-color: blue;
+    color: white;
+    border-style: none;
+    text-indent: 0px;
+    position: absolute;
+    bottom: 20px;
+    right: 67px;
+}
+
+.title{
+    font-size: 1.8em;
+    line-height: 20px;
+}
+
+.about{
+    font-family: 'ChronicaPro Regular';
+    font-weight: normal;
+    font-size: .7em;
+    color: #888;
+}
+
+main input:focus{
+    border: blue;
+}
