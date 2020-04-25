@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    width: 85%;
+    height: 100%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.box{
+    width: calc(100% / 3.5);
+    height: 400px;
+    background-color: rgb(241, 241, 241);
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 5px;
+}
+input[type="text"],
+input[type="number"]{
+    font-weight: bold;
+}
