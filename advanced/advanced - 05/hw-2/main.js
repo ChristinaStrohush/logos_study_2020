@@ -4,7 +4,7 @@ let storage = document.forms['storage']
 let result = document.forms['result']
 let getAll = x => document.querySelectorAll(x)
 
-let getId, count, item, sellRes, newBalance, newCount, newCheck;
+let getId, count, item, sellRes, newBalance, newCheck;
 
 result.add.addEventListener('click', function(){
     document.querySelector('.check').innerText = ''
@@ -19,7 +19,6 @@ result.add.addEventListener('click', function(){
         sellRes = shop.sell(getId, count)
         newCheck = sellRes.check
         newBalance = sellRes.balance
-        newCount = sellRes.count
         result.resultArea.value += `${shop.showAdd(item, count)}\n`
     } else alert(`${item} - Вибачте, на складі залишилось ${shop.data.product[getId].count} шт.`)
 })
