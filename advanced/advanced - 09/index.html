@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div class="main">
+        <div class="block">
+            <form name="addUserForm">
+                <div class="form-group">
+                  <label for="formGroupExampleInput">Login</label>
+                  <input type="text" name="loginInp" class="form-control" id="formGroupExampleInput" placeholder="Enter login">
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput2">Password</label>
+                  <input type="password" name="passwordInp" class="form-control" id="formGroupExampleInput2" placeholder="Enter password">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Email address</label>
+                    <input type="email" name="emailInp" class="form-control" id="formGroupExampleInput2" placeholder="Enter email">
+                </div>
+                <input type="button" name="saveUser" class="btn btn-outline-success" value="Add user">
+                <input type="button" name="changeUser" class="btn btn-outline-success" value="Edit user" style="display: none;">
+              </form>
+        </div>
+        <div class="block">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Login</th>
+                    <th scope="col">Password</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Edit</th>
+                    <th scope="col">Delete</th>
+                  </tr>
+                </thead>
+                <tbody class="renderBody">
+                </tbody>
+              </table>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
