@@ -30,11 +30,15 @@ function moreParametrs(){
 }
 
 function createCard(){
+    let a;
     getSel('.cardOfMovie').innerHTML = ''
     for(let i = 0; i<obj.Search.length; i++){
+        a = obj.Search[i].Poster
+        if(a == 'N/A') a = 'image/noimage.png'
+        else a = obj.Search[i].Poster
         getSel('.cardOfMovie').innerHTML += `<div class="col mb-4">
         <div class="card">
-        <img src="${obj.Search[i].Poster}" class="card-img-top">
+        <img src="${a}" class="card-img-top">
         <div class="card-body p-0">
         <h5 class="card-title text-center d-flex justify-content-center align-items-center m-0">${obj.Search[i].Title}</h5>
         <p class="card-text m-0 p-2 text-center">${obj.Search[i].Type}</p>
