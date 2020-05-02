@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #555;
+}
+
+.card-title{
+    height: 60px;
+    background-color: rgb(223, 223, 223);
+}
+.card-img-top{
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+}
