@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.sing{
+    height: 100vh;
+    background-color: aliceblue;
+}
+.singForm{
+    width: 35%;
+}
+.hide{
+    display: none;
+}
+.invalid-feedback{
+    background-color: #dc3545;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.boxCard{
+    width: 500px;
+    height: 400px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.ava{
+    width: 150px;
+    height: 150px;
+    background-image: url(image/avatar.webp);
+    background-position: center;
+    background-size: cover;
+}
+.email,
+.position{
+    color: #999;
+}
+.line{
+    width: 30%;
+}

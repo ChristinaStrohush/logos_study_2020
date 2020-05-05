@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div class="sing d-flex justify-content-center align-items-center" id="singUp">
+        <form class="form-singin singForm singUp" name="singUp">
+            <div class="text-center mb-4">
+                <h1 class="h3 mb-3 font-weight-normal">Please sing up</h1>
+            </div>
+            <div class="form-label-group">
+                <label for="inputFirstName">First name</label>
+                <input type="text" name="firstName" id="inputFirstName" class="form-control" placeholder="First name" required>
+            </div>
+            <div class="form-label-group">
+                <label for="inputLastName">Last name</label>
+                <input type="text" name="lastName" id="inputLastName" class="form-control" placeholder="Last name" required>
+            </div>
+            <div class="form-label-group feedbackSingUp">
+                <label for="inputEmail">Email address</label>
+                <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required>
+            </div>
+            <div class="form-label-group">
+                <label for="inputPassword">Password</label>
+                <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+            </div>
+            <button name="button" class="btn btn-lg btn-primary btn-block mt-4" type="button">Sign up</button>
+            <button name="link" type="button" class="btn btn-sm btn-link p-0">Sing in now</button>
+        </form>
+    </div>
+    <div class="sing justify-content-center align-items-center hide" id="singIn">
+        <form class="form-singin singForm singIn" name="singIn">
+            <div class="text-center mb-4">
+                <h1 class="h3 mb-3 font-weight-normal">Please sing in</h1>
+            </div>
+            <div class="form-label-group">
+                <label for="inputEmailCheck">Email address</label>
+                <input type="email" name="email" id="inputEmailCheck" class="form-control" placeholder="Email address" required>
+            </div>
+            <div class="form-label-group">
+                <label for="inputPasswordCheck">Password</label>
+                <input type="password" name="password" id="inputPasswordCheck" class="form-control" placeholder="Password" required>
+            </div>
+            <div class="feedbackSingIn"></div>
+            <button class="btn btn-lg btn-success btn-block mt-4" name="button" type="button">Sign up</button>
+            <button name="link" type="button" class="btn btn-sm btn-link p-0">Sing up now</button>
+        </form>
+    </div>
+    <div class="sing justify-content-center align-items-center hide" id="boxCard">
+        <div class="boxCard d-flex flex-column justify-content-around align-items-center">
+            <div class="ava"></div>
+            <p class="name h2"></p>
+            <p class="email h5"></p>
+            <p class="position h5">Designer & Web Developing</p>
+            <div class="line">
+                <hr>
+            </div>
+            <button class="btn btn-lg btn-success btn-block mt-4" id="cardButton" type="button">Sign up</button>
+        </div>
+    </div>
+    
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>
