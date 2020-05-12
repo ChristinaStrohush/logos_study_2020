@@ -1,0 +1,25 @@
+<div class="box">
+    <div class="container pt-2">
+        <h2>Bad words: <span [style.color]="colorBadWord" [innerHTML]="words"></span></h2>
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-8">
+                    <input class="form-control" [class.is-invalid]="isEmptyInp" type="text" [(ngModel)]="badWord"
+                        name="badWord" [placeholder]="plHolderInput">
+                </div>
+                <div class="form-group col-md-2">
+                    <button (click)="checkBadWord()" class="btn btn-warning btn-block">Add</button>
+                </div>
+                <div class="form-group col-md-2">
+                    <button (click)="reset()" class="btn btn-danger btn-block">Reset</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <textarea [(ngModel)]="userText" name="userText" class="form-control" [class.is-invalid]="isEmptyArea" rows="3" [placeholder]="plHolderArea"></textarea>
+            </div>
+            <div class="form-group">
+                <button (click)="cenzor()" class="btn btn-success btn-block">Cenzor</button>
+            </div>
+        </form>
+    </div>
+</div>
