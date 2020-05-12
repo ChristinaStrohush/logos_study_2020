@@ -1,2 +1,2 @@
 # logos_study_2020
-homeworks
+homeworks: html, css, scss, js, jquery, typescript, bootstrap, gulp, angular
