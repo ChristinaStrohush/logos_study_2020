@@ -1,0 +1,14 @@
+<div class="container-fluid">
+    <nav class="navbar nav-tabs d-flex justify-content-between p-0">
+        <div class="nav">
+            <span class="navbar-text p-2">Last works >>></span>
+            <a class="nav-item nav-link" [routerLink]="[ 'cenzor' ]" routerLinkActive="active">Cenzor</a>
+            <a class="nav-item nav-link" [routerLink]="[ 'users' ]" routerLinkActive="active">Users</a>
+            <a class="nav-item nav-link" [routerLink]="[ 'tasks' ]" routerLinkActive="active">Tasks</a>
+        </div>
+            <span class="navbar-text p-2 text-danger" [routerLink]="[ '/home' ]">Back to >>> Home</span>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <router-outlet></router-outlet>
+    </div>
+</div>

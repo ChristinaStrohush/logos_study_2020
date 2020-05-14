@@ -1,0 +1,53 @@
+<div class="container">
+    <h2>Plan of your day!</h2>
+    <h4>User: Christina Strohush. Count of Tasks - {{countTask}}</h4>
+    <hr>
+    <form>
+        <div class="row">
+            <div class="col-10">
+                <input type="text" class="form-control" [(ngModel)]="newTask" name="newTask">
+            </div>
+            <div class="col-2">
+                <button type="button" class="btn btn-success btn-block" (click)="addTask()">Add</button>
+            </div>
+        </div>
+    </form>
+    <table class="table mt-3">
+        <thead>
+            <th>#</th>
+            <th>Task</th>
+            <th>Check</th>
+            <th>Done/In progress</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let point of userList; let i=index">
+                <td>{{i+1}}</td>
+                <td>{{point.task}}</td>
+                <td>
+                    <input type="checkbox" (click)="checkTask(i, $event)" [checked]="point.check">
+                </td>
+                <td>{{point.result}}</td>
+                <td>
+                    <button class="btn btn-warning" (click)="editTask(i)">Edit</button>
+                </td>
+                <td>
+                    <button class="btn btn-danger" (click)="deleteTask(i)" [disabled]="!point.check">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <form class="mb-5" *ngIf="isVisible">
+        <div class="d-flex justify-content-center">
+            <div class="row col-6">
+                <div class="col">
+                    <input type="text" class="form-control" [(ngModel)]="changeTask" name="changeTask">
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-success" (click)="saveEdit()">Save</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
