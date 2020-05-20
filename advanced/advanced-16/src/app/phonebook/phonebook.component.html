@@ -1,0 +1,97 @@
+<div class="container-fluid">
+    <p class="h2 text-danger">My phone book!</p>
+    <hr>
+    <form>
+        <div class="row">
+            <div class="col-10">
+            <mat-form-field>
+                <input matInput (keyup)="applyFilter($event)" placeholder="search text goes here">
+            </mat-form-field></div>
+            <div class="col-2">
+                <button type="button" class="btn btn-success btn-block" (click)="openModal(phoneModal)">add
+                    phone</button>
+            </div>
+        </div>
+    </form>
+    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+        <ng-container matColumnDef="firstName">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> First name </th>
+            <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="lastName">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Last name </th>
+            <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="numberPhone">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Number </th>
+            <td mat-cell *matCellDef="let element"> {{element.numberPhone}} </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="edit">
+            <th mat-header-cell *matHeaderCellDef> Edit </th>
+            <td mat-cell *matCellDef="let element">
+                <button mat-raised-button matTooltip="Click to Edit" class="raisedbutton" color="accent" (click)="editUser(userModal, element)">
+                    edit
+                </button>
+            </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="delete">
+            <th mat-header-cell *matHeaderCellDef> Delete </th>
+            <td mat-cell *matCellDef="let element; let i = index;">
+                <button mat-raised-button matTooltip="Click to Delete" class="raisedbutton" color="warn" (click)="deleteUser(i)">
+                    delete
+                </button>
+            </td>
+        </ng-container>
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <ng-template #phoneModal>
+        <div class="modal-header">
+            <h4 class="modal-title pull-left">Add phone</h4>
+            <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-control" [(ngModel)]="firstNameInp" name="firstNameInp" placeholder="first name goes here">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" [(ngModel)]="lastNameInp" name="lastNameInp" placeholder="last name goes here">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" [(ngModel)]="numberInp" name="numberInp" placeholder="number phone goes here">
+                </div>
+                <button type="button" class="btn btn-info btn-block" (click)="savePhone()">save</button>
+            </form>
+        </div>
+    </ng-template>
+    <ng-template #userModal>
+        <div class="modal-header">
+            <h4 class="modal-title pull-left">Add phone</h4>
+            <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-control" [(ngModel)]="firstNameEdit" name="firstNameEdit">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" [(ngModel)]="lastNameEdit" name="lastNameEdit">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" [(ngModel)]="numberEdit" name="numberEdit">
+                </div>
+                <button type="button" class="btn btn-info btn-block" (click)="saveEdit(user)">save</button>
+            </form>
+        </div>
+    </ng-template>
+</div>
