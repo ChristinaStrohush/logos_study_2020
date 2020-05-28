@@ -1,0 +1,96 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark d-flex justify-content-between">
+    <div class="navbar-brand">Angular Blog</div>
+    <button (click)="updateDB()" *ngIf="!isAdminPanel" class="btn btn-outline-light">Blogs</button>
+    <form *ngIf="isAdminPanel" class="form-inline">
+        <button (click)="openModal(sign, $event)" *ngIf="!isVisible" class="btn btn-outline-success my-2 my-sm-0"
+            type="button">Sing
+            In</button>
+        <button (click)="openModalPost(addPost)" *ngIf="isVisible" class="btn btn-outline-success my-2 my-sm-0"
+            type="button">Add post</button>
+        <button *ngIf="isUser" class="btn btn-warning my-2 my-sm-0" type="button">{{user}}</button>
+        <button (click)="openModal(sign, $event)" *ngIf="!isVisible" class="btn btn-outline-info my-2 my-sm-0"
+            type="button">Sing
+            Up</button>
+        <button (click)="singOut()" *ngIf="isVisible" class="btn btn-outline-info my-2 my-sm-0" type="button">Sing
+            Out</button>
+    </form>
+</nav>
+<div *ngIf="isAdminPanel" class="container-fluid">
+    <div class="card mt-3" *ngFor="let b of arrBlogs; let i=index">
+        <h5 class="card-header">{{b.topic}}</h5>
+        <div class="card-body">
+            <div class="d-flex justify-content-between">
+                <h6 class="card-subtitle mb-2 text-muted">Posted by: {{ b.postedBy }}</h6>
+                <p class="card-subtitle mb-2 small text-muted">{{ b.date }}</p>
+            </div>
+            <p class="card-text">{{b.message}}</p>
+            <div class="form-row d-flex justify-content-end">
+                <button *ngIf="b.isAdmin" (click)="editBlog(b, addPost)" type="button" class="btn btn-warning">Edit</button>
+                <button *ngIf="b.isAdmin" (click)="deleteBlog(b)" type="button" class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #sign>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">{{signAct}}</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="form-group" *ngIf="isUserName">
+                <label for="userName">User Name</label>
+                <input [(ngModel)]="userName" name="userName" type="text" class="form-control" id="userName">
+            </div>
+            <div class="form-group">
+                <label for="userEmail">User Email</label>
+                <input [(ngModel)]="userEmail" name="userEmail" type="email" class="form-control" id="userEmail">
+            </div>
+            <div class="form-group">
+                <label for="userPassword">User Password</label>
+                <input [(ngModel)]="userPassword" name="userPassword" type="password" class="form-control"
+                    id="userPassword">
+            </div>
+            <div class="form-row">
+                <div class="col-6">
+                    <button (click)="modalRef.hide()" type="button" class="btn btn-secondary btn-block">Close</button>
+                </div>
+                <div class="col-6">
+                    <button (click)="registration()" type="button" class="btn btn-success btn-block">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</ng-template>
+
+<ng-template #addPost>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Add post</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input [(ngModel)]="title" name="title" type="text" class="form-control" id="title">
+            </div>
+            <div class="form-group">
+                <label for="text">Text</label>
+                <textarea [(ngModel)]="text" name="text" class="form-control" id="text" rows="3"></textarea>
+            </div>
+            <div class="form-row">
+                <div class="col-6">
+                    <button (click)="modalRefPost.hide()" type="button" class="btn btn-secondary btn-block">Close</button>
+                </div>
+                <div class="col-6">
+                    <button (click)="addBlog()" type="button" class="btn btn-success btn-block">Add Post</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</ng-template>
