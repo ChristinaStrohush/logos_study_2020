@@ -1,0 +1,23 @@
+<div class="row mt-3">
+    <div class="col-2">
+        <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+            <div class="nav-link">
+                <button type="button" class="btn btn-dark btn-block" [routerLink]="[ 'admin-category' ]"
+                    routerLinkActive="active">Categoty</button>
+            </div>
+            <div class="nav-link">
+                <button type="button" class="btn btn-dark btn-block" [routerLink]="[ 'admin-products' ]"
+                    routerLinkActive="active">Products</button>
+            </div>
+            <div class="nav-link">
+                <button type="button" class="btn btn-dark btn-block" [routerLink]="[ 'admin-blogs' ]"
+                    routerLinkActive="active">Blogs</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-10 mt-1">
+        <div class="tab-content">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

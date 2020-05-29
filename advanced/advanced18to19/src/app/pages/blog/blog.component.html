@@ -1,0 +1,13 @@
+<div class="container-fluid mt-3">
+  <div class="row">
+    <div *ngFor="let b of arrBlogs; let i=index" class="card col-4 border-0">
+      <img src="{{b.image}}" class="card-img-top" alt="pizza">
+      <div class="card-body">
+        <p class="card-text font-weight-light text-monospace text-info">{{b.date | uppercase}} {{b.autor | uppercase}}
+        </p>
+        <h5 class="card-title">{{b.title}}</h5>
+        <p class="card-text">{{b.text}}</p>
+      </div>
+    </div>
+  </div>
+</div>
