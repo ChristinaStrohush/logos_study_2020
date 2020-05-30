@@ -4,8 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DatePipe } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
+import { AppComponent } from './app.component';
 import { HeaderComponent } from './comonents/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ProductsComponent } from './pages/products/products.component';
@@ -17,6 +18,7 @@ import { AdminProductsComponent } from './admin/admin-products/admin-products.co
 import { AdminBlogsComponent } from './admin/admin-blogs/admin-blogs.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SearchPipe } from './shared/pipes/search.pipe';
 
 @NgModule({
   declarations: [
@@ -29,14 +31,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AdminComponent,
     AdminCategoryComponent,
     AdminProductsComponent,
-    AdminBlogsComponent
+    AdminBlogsComponent,
+    SearchPipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ModalModule.forRoot()
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]

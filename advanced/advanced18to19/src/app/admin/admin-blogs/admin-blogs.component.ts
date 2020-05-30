@@ -29,14 +29,13 @@ export class AdminBlogsComponent implements OnInit {
     this.getBlogs();
   }
 
-  getBlogs(): void{
+  private getBlogs(): void{
     this.blogServise.getBlogs().subscribe(data => {
       this.arrBlogs = data;
     });
   }
 
   addBlog(): void{
-    console.log(this.date);
     if (this.title !== undefined && this.text !== undefined && this.autor !== undefined){
       const newBlog: IBlog = new Blog(1, this.title, this.text, this.date, this.autor, this.image);
       if (!this.isEdit){

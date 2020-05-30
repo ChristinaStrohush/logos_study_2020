@@ -1,1 +1,57 @@
-<p>admin-category works!</p>
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h6 class="pl-1">Category</h6>
+        <button (click)="openModal(addCategory)" class="btn btn-dark">Add</button>
+    </div>
+    <div class="card-body">
+        <form>
+            <input [(ngModel)]="filterCategory" name="filterCategory" type="text" class="form-control"
+                placeholder="filter category...">
+        </form>
+        <table class="table table-bordered mt-3">
+            <thead class="table-secondary">
+                <th>#</th>
+                <th class="col-4">Name</th>
+                <th class="col-2">Edit</th>
+                <th class="col-2">Delete</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let c of arrCategories | search: filterCategory">
+                    <th>{{c.id}}</th>
+                    <th>{{c.name}}</th>
+                    <th>
+                        <button (click)="editCategory(c, addCategory)" class="btn btn-dark">Edit</button>
+                    </th>
+                    <th>
+                        <button (click)="openModalDelete(deletePanel, c)" class="btn btn-dark">Delete</button>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<ng-template #addCategory>
+    <div class="modal-header">
+        <h5 class="modal-title">Add new category</h5>
+        <button (click)="modalRef.hide()" type="button" class="close pull-right" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <input (input)="typeInNameCategory()" [(ngModel)]="nameCategory" name="nameCategory" type="text"
+            class="form-control" placeholder="name of category...">
+    </div>
+    <div class="modal-footer">
+        <button (click)="modalRef.hide()" type="button" class="btn btn-dark">Close</button>
+        <button (click)="addCategories()" type="button" class="btn btn-dark" [disabled]="isEmpty">Add</button>
+    </div>
+</ng-template>
+
+<ng-template #deletePanel>
+    <div class="modal-body text-center">
+        <p>Do you want to delete category - {{deleteCat.name}}?</p>
+        <button type="button" (click)="modalRefDel.hide()" class="btn btn-dark">Dismiss</button>
+        <button type="button" (click)="deleteCategory()" class="btn btn-danger">Delete</button>
+    </div>
+</ng-template>

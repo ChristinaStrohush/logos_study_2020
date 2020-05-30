@@ -1,5 +1,22 @@
 {
-  "category": [],
+  "categories": [
+    {
+      "id": 1,
+      "name": "pizza"
+    },
+    {
+      "id": 2,
+      "name": "salad"
+    },
+    {
+      "id": 3,
+      "name": "drink"
+    },
+    {
+      "id": 4,
+      "name": "desert"
+    }
+  ],
   "products": [],
   "blogs": [
     {
