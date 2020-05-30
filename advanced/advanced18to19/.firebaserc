@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "la-piec-dc849": {
+      "hosting": {
+        "advanced17to19": [
+          "la-piec-dc849"
+        ]
+      }
+    }
+  }
+}

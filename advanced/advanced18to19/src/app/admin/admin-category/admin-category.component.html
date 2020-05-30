@@ -17,14 +17,14 @@
             </thead>
             <tbody>
                 <tr *ngFor="let c of arrCategories | search: filterCategory">
-                    <th>{{c.id}}</th>
-                    <th>{{c.name}}</th>
-                    <th>
+                    <td>{{c.id}}</td>
+                    <td>{{c.name}}</td>
+                    <td>
                         <button (click)="editCategory(c, addCategory)" class="btn btn-dark">Edit</button>
-                    </th>
-                    <th>
+                    </td>
+                    <td>
                         <button (click)="openModalDelete(deletePanel, c)" class="btn btn-dark">Delete</button>
-                    </th>
+                    </td>
                 </tr>
             </tbody>
         </table>

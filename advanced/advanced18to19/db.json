@@ -15,9 +15,69 @@
     {
       "id": 4,
       "name": "desert"
+    },
+    {
+      "id": 5,
+      "name": "pasta"
     }
   ],
-  "products": [],
+  "products": [
+    {
+      "id": 1,
+      "category": {
+        "id": 1,
+        "name": "pizza"
+      },
+      "name": "Margherita",
+      "description": "Tomato sauce, mozzarella and oregano",
+      "price": 4,
+      "image": "https://firebasestorage.googleapis.com/v0/b/la-piec-dc849.appspot.com/o/imagesPizza%2Fd60bfaf8-d22d-41e2-02ae-c7a420e6ea8e.jpeg?alt=media&token=e089602b-3ec9-484b-a87b-e093493e75b1"
+    },
+    {
+      "id": 2,
+      "category": {
+        "id": 1,
+        "name": "pizza"
+      },
+      "name": "Cardinale",
+      "description": "Tomato sauce, mozzarella, ham, and oregano",
+      "price": 5,
+      "image": "https://firebasestorage.googleapis.com/v0/b/la-piec-dc849.appspot.com/o/imagesPizza%2Fed1f3b6f-fd6b-418c-bd9c-216dd213c154.jpeg?alt=media&token=f419451c-8843-410d-899f-b1cef4640042"
+    },
+    {
+      "id": 3,
+      "category": {
+        "id": 1,
+        "name": "pizza"
+      },
+      "name": "Carbonara",
+      "description": "Tomato sauce, mozzarella, parmesan, eggs, and bacon",
+      "price": 4,
+      "image": "https://firebasestorage.googleapis.com/v0/b/la-piec-dc849.appspot.com/o/imagesPizza%2F32566f27-a896-4d09-be04-8b214644d803.jpeg?alt=media&token=6d2e1fd8-bcb7-4ae4-976e-fb7e8d0750e6"
+    },
+    {
+      "id": 4,
+      "category": {
+        "id": 1,
+        "name": "pizza"
+      },
+      "name": "Parmigiana",
+      "description": "Tomato sauce, mozzarella, eggplants and parmesan flakes",
+      "price": 6,
+      "image": "https://firebasestorage.googleapis.com/v0/b/la-piec-dc849.appspot.com/o/imagesPizza%2F6a8e4cef-5755-42bd-bae2-75263826cb56.jpeg?alt=media&token=b306960e-9250-4b1d-9926-6e522397f2f7"
+    },
+    {
+      "id": 5,
+      "category": {
+        "id": 2,
+        "name": "salad"
+      },
+      "name": "Salmone",
+      "description": "Salmon, spinach, ricotta cheese, and parmesan",
+      "price": 3,
+      "image": "https://firebasestorage.googleapis.com/v0/b/la-piec-dc849.appspot.com/o/imagesPizza%2Faadf3912-2df8-4cdd-b8c4-ddf03d16341f.jpeg?alt=media&token=16d8b2a3-4bdc-464e-9535-479102e5bbfb"
+    }
+  ],
   "blogs": [
     {
       "id": 1,

@@ -6,7 +6,7 @@ import { ICategory } from '../interfaces/category.interface';
 })
 export class SearchPipe implements PipeTransform {
 
-  transform(categories: Array<ICategory>, nameCategory: string): unknown {
+  transform(categories: Array<any>, nameCategory: string): unknown {
     if (!nameCategory) {
       return categories;
     }

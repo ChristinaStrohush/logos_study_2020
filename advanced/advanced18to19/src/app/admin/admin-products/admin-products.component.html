@@ -1,1 +1,102 @@
-<p>admin-products works!</p>
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h6 class="pl-1">Products</h6>
+        <button (click)="openModal(addModal)" class="btn btn-dark">Add</button>
+    </div>
+    <div class="card-body">
+        <form>
+            <input [(ngModel)]="filterProduct" name="filterProduct" type="text" class="form-control"
+                placeholder="filter products...">
+        </form>
+        <table class="table mt-3">
+            <thead class="table-secondary">
+                <th>#</th>
+                <th>Category</th>
+                <th>Name</th>
+                <th>Descriprion</th>
+                <th>Price</th>
+                <th>Image</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let p of arrProducts | search: filterProduct">
+                    <td>{{p.id}}</td>
+                    <td>{{p.category.name}}</td>
+                    <td>{{p.name}}</td>
+                    <td>{{p.description}}</td>
+                    <td>{{p.price | currency}}</td>
+                    <td>
+                        <img src="{{p.image}}" alt="pizza" style="width: 50px;">
+                    </td>
+                    <td>
+                        <button (click)="editProduct(p, addModal)" class="btn btn-dark">Edit</button>
+                    </td>
+                    <td>
+                        <button (click)="openModalDelete(deletePanel, p)" class="btn btn-dark">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<ng-template #addModal>
+    <div class="modal-header">
+        <h5 class="modal-title">Add new product</h5>
+        <button (click)="modalRef.hide()" type="button" class="close pull-right" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="form-group row">
+                <label for="inputCat" class="col-sm-3 col-form-label">Category:</label>
+                <div class="col-sm-9">
+                    <select [(ngModel)]="productCategory" name="productCategory" class="custom-select" id="inputCat">
+                        <option selected disabled value="">Choose...</option>
+                        <option *ngFor="let c of arrCategories" [ngValue]="c">{{c.name}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputName" class="col-sm-3 col-form-label">Name:</label>
+                <div class="col-sm-9">
+                    <input [(ngModel)]="productName" name="productName" type="text" class="form-control" id="inputName">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputDesc" class="col-sm-3 col-form-label">Description:</label>
+                <div class="col-sm-9">
+                    <textarea [(ngModel)]="productDescription" name="productDescription" class="form-control" id="inputDesc" rows="3"></textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPrice" class="col-sm-3 col-form-label">Price:</label>
+                <div class="col-sm-9">
+                    <input [(ngModel)]="productPrice" name="productPrice" type="number" class="form-control" id="inputPrice">
+                </div>
+            </div>
+            <div *ngIf="!isEdit" class="custom-file">
+                <input (change)="uploadFile($event)" type="file" class="custom-file-input" id="customFile">
+                <label class="custom-file-label" for="customFile">Choose file</label>
+            </div>
+            <div *ngIf="!isEdit" class="progress mt-3">
+                <div class="progress-bar progress-bar-striped bg-dark" role="progressbar"
+                    [style.width]="(uploadProgress | async) + '%'" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button (click)="modalRef.hide()" type="button" class="btn btn-dark">Close</button>
+        <button (click)="addProduct()" type="button" class="btn btn-dark">Add</button>
+    </div>
+</ng-template>
+
+<ng-template #deletePanel>
+    <div class="modal-body text-center">
+        <p>Do you want to delete product - {{deleteProd.name}}?</p>
+        <button type="button" (click)="modalRefDel.hide()" class="btn btn-dark">Dismiss</button>
+        <button type="button" (click)="deleteProduct()" class="btn btn-danger">Delete</button>
+    </div>
+</ng-template>
